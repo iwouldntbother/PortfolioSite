@@ -8,6 +8,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 * {
@@ -25,6 +26,7 @@ body {
     height: 100vh;
     width: 100vw;
     position: absolute;
+    top: 0;
     overflow: hidden;
     display: flex;
     flex-direction: row;
@@ -36,6 +38,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 
 #leftContainer {
@@ -43,6 +46,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 #topBarContainer {
@@ -57,28 +61,6 @@ body {
     margin: 0;
 }
 
-#informationContainer {
-    width: 40vw;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#informationContainer #workTitle {
-    font-weight: 500;
-    font-size: 5vw;
-    margin: 0;
-    margin-left: 1vw;
-}
-
-#informationContainer #workSubTitle {
-    font-weight: 300;
-    font-size: 1.75vw;
-    margin: 0;
-    margin-left: 1vw;
-    margin-top: -3vh;
-}
 
 #lowerInformationContainer {
     width: 40vw;
@@ -98,12 +80,6 @@ body {
 #lowerInformationContainer p {
     margin: 0;
     font-weight: 200;
-}
-
-#lowerInformationContainer span {
-    position: absolute;
-    bottom: 0.5vh;
-    font-size: 0.75vw;
 }
 
 #projectSideBarContainer {
@@ -216,7 +192,7 @@ body {
 }
 
 #nextProject {
-    width: 10vw;
+    width: 0vw;
     background-color: blue;
     background-image: url("");
     background-position: center;
@@ -228,4 +204,58 @@ body {
 
 #nextProject:hover {
     width: 15vw !important;
+}
+
+/* Detail */
+
+#projectDetailContainer {
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#informationContainer {
+    position: sticky;
+    top: 0;
+    width: 40vw;
+    /* height: 20vh; */
+    margin-top: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#informationContainer #workTitle {
+    font-weight: 500;
+    font-size: 5vw;
+    margin: 0;
+    margin-left: 1vw;
+}
+
+#informationContainer #workSubTitle {
+    font-weight: 300;
+    font-size: 1.75vw;
+    margin: 0;
+    margin-left: 1vw;
+    margin-top: -3vh;
+}
+
+#projectDetailHolder {
+    position: absolute;
+    top: calc(100vh + 10vw);
+    padding-left: 1vw;
+}
+
+#copyright {
+    position: fixed;
+    bottom: 0.5vh;
+    left: 1vw;
+    font-size: 0.75vw;
+}
+
+#copyrightLink {
+    text-decoration: none;
+    color: gray;
 }

@@ -47,6 +47,7 @@ function loadProject(unit, projectID) {
         nextPreview.style.width = "0vw";
         nextPreview.style.pointerEvents = "none";
     } else {
+        nextPreview.style.backgroundImage = "url('" + projectData[unit][projectID+1].coverImage + "')"
         nextPreview.style.width = "10vw"
         nextPreview.style.pointerEvents = "all";
     }
@@ -118,3 +119,14 @@ init()
 // 2. Plan for only 1 project (Covers)
 
 // 3. Get Covers loading
+
+
+window.addEventListener("scroll", function(){
+    var remap = (1 - (window.scrollY / window.innerHeight)) * 1.2;
+    if (window.scrollY <= window.innerHeight) {
+        // console.log((1-(window.scrollY / window.innerHeight))*2)
+        if (remap <= 1) {
+            document.getElementById("siteContainer").style.opacity = remap;
+        }
+    }
+})
