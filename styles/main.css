@@ -103,7 +103,7 @@ body {
 #lowerInformationContainer span {
     position: absolute;
     bottom: 0.5vh;
-    font-size: 0.9vw;
+    font-size: 0.75vw;
 }
 
 #projectSideBarContainer {
@@ -192,6 +192,12 @@ body {
     cursor: pointer;
 }
 
+.controlDisabled {
+    cursor: default !important;
+    pointer-events: none;
+    opacity: 0.2;
+}
+
 #projectContainer {
     width: 50vw;
     height: 100vh;
@@ -200,12 +206,13 @@ body {
 }
 
 #currentProject {
-    width: 40vw;
+    width: 100%;
     background-color: darkred;
     background-image: url("");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: width 0.5s;
 }
 
 #nextProject {
@@ -215,4 +222,10 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: width 0.5s;
+    cursor: pointer;
+}
+
+#nextProject:hover {
+    width: 15vw !important;
 }

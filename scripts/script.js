@@ -1,6 +1,7 @@
 // console.log(Object.keys(projectData).length)
 
-var currentUnit = "unit1"
+var currentUnit = "unit1";
+var currentProject = 0;
 
 function loadUnits() {
     document.getElementById("unitListHolder").innerHTML = "";
@@ -19,7 +20,9 @@ function switchUnit(unit) {
     document.getElementById(currentUnit+"BTN").classList.remove("selected")
     loadProject(unit, 0)
     currentUnit = unit
+    currentProject = 0
     document.getElementById(currentUnit+"BTN").classList.add("selected")
+    updateArrows()
 }
 
 function loadProject(unit, projectID) {
@@ -37,15 +40,76 @@ function loadProject(unit, projectID) {
     title.innerHTML = titleData
     subTitle.innerHTML = subTitleData
 
+    currentPreview.style.backgroundImage = "url('" + projectData[unit][projectID].coverImage + "')"
+
+    if (projectID == projectData[unit].length - 1) {
+        console.log("last or only cover")
+        nextPreview.style.width = "0vw";
+        nextPreview.style.pointerEvents = "none";
+    } else {
+        nextPreview.style.width = "10vw"
+        nextPreview.style.pointerEvents = "all";
+    }
+
 }
+
+
+function updateArrows() {
+
+    var currentUnitLength = projectData[currentUnit].length - 1
+
+    if (currentProject == 0 && currentProject < currentUnitLength) {
+        disableControl("left")
+    } else if (currentProject == currentUnitLength && currentProject > 0) {
+        disableControl("right")
+    } else if (currentProject == currentUnitLength && currentProject == 0) {
+        disableControl("both")
+    } else {
+        console.log("Error: updateArrows() didn't change anything", currentProject, currentUnitLength)
+    }
+
+}
+
+function disableControl(arrow) {
+    const arrowLeft = document.getElementById("controlLeft");
+    const arrowRight = document.getElementById("controlRight");
+
+    arrowLeft.classList.remove("controlDisabled");
+    arrowRight.classList.remove("controlDisabled");
+
+    if (arrow == "left") {
+        arrowLeft.classList.add("controlDisabled");
+    } else if (arrow == "right") {
+        arrowRight.classList.add("controlDisabled");
+    } else if (arrow == "both") {
+        arrowLeft.classList.add("controlDisabled");
+        arrowRight.classList.add("controlDisabled");
+    }
+}
+
+function arrowRight() {
+    loadProject(currentUnit, currentProject + 1)
+    currentProject = currentProject + 1
+    updateArrows()
+}
+
+function arrowLeft() {
+    loadProject(currentUnit, currentProject - 1)
+    currentProject = currentProject - 1
+    updateArrows()
+}
+
 
 function init() {
     loadUnits();
 
-    loadProject(currentUnit, 0);
+    loadProject(currentUnit, currentProject);
+
+    updateArrows()
 }
 
 init()
+
 
 // TODO
 

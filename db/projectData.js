@@ -3,7 +3,7 @@ var projectData = {
         {
             title: "MF Gnome",
             subTitle: "Group Project",
-            coverImage: "/unit1/0/cover.jpg"
+            coverImage: "/db/unit1/0/cover.jpg"
         }
     ],
 
@@ -11,12 +11,12 @@ var projectData = {
         {
             title: "test1",
             subTitle: "test1sub",
-            coverImage: "/unit1/0/cover.jpg"
+            coverImage: "/db/unit2/0/cover.jpg"
         },
         {
             title: "test2",
             subTitle: "test2sub",
-            coverImage: "/unit1/0/cover.jpg"
+            coverImage: "/db/unit2/1/cover.jpg"
         }
     ],
 
