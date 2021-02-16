@@ -1,25 +1,55 @@
 /* Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    /* Poppins */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    /* Playfair Display */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+
+/* Colours */
+
+    /* Dark Mode */
+        /* Background: #262626 */
+        /* Text: #D9D9D9 */
+
+    /* Light Mode */
+        /* Background: #D9D9D9 */
+        /* Text: #262626 */
+
+    .bg {
+        background-color: #262626;
+    }
+
+    .text {
+        color: #D9D9D9;
+    }
+
+    .bgInverted {
+        background-color: #D9D9D9;
+    }
+
+    .textInverted {
+        color: #262626;
+    }
+
 
 /* General rules */
 
-body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-}
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #262626;
+        color: #D9D9D9;
+    }
 
-* {
-    box-sizing: border-box;
-}
+    * {
+        box-sizing: border-box;
+    }
 
-/* Specific CSS Rules */
 
-body {
-    background-color: #2f3640;
-    color: #dcdde1;
-}
+/* Site Container */
 
 #siteContainer {
     height: 100vh;
@@ -31,190 +61,138 @@ body {
 }
 
 
-#mainContainer {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-}
+/* Left Container Detail */
 
 #leftContainer {
-    width: 40vw;
+    width: 35vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-#topBarContainer {
-    width: 30vw;
-    height: 10vh;
-    padding: 1vw;
-}
-
-#topBarContainer h1 {
-    font-size: 1.5vw;
-    font-weight: 400;
-    margin: 0;
-}
-
-#informationContainer {
-    width: 40vw;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#informationContainer #workTitle {
-    font-weight: 500;
-    font-size: 5vw;
-    margin: 0;
-    margin-left: 1vw;
-}
-
-#informationContainer #workSubTitle {
-    font-weight: 300;
-    font-size: 1.75vw;
-    margin: 0;
-    margin-left: 1vw;
-    margin-top: -3vh;
-}
-
-#lowerInformationContainer {
-    width: 40vw;
-    height: 20vh;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#lowerInformationContainer h1 {
-    margin: 0;
-    font-weight: 400;
-}
-
-#lowerInformationContainer p {
-    margin: 0;
-    font-weight: 200;
-}
-
-#lowerInformationContainer span {
-    position: absolute;
-    bottom: 0.5vh;
-    font-size: 0.9vw;
-}
-
-#projectSideBarContainer {
-    width: 10vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#unitListHolder {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: right;
-    font-size: 0.6vw;
-    margin-top: 2vw;
-}
-
-#unitListHolder h1 { 
-    font-weight: 300;
-    margin-right: 1vw;
-    cursor: pointer;
-}
-
-.selected {
-    color: white;
-}
-
-.deselected {
-    color: #666666;
-}
-
-#controlsContainer {
-    /* background-color: darkgoldenrod; */
-    height: 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#controlsHolder {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#controls {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 80%;
-}
-
-#pageNo {
-    font-weight: 300;
-}
-
-#controls div {
-    width: 3vw;
-    height: 3vw;
-    /* background-color: darkgreen; */
-}
-
-#controlLeft {
-    background-image: url("/images/controlLeft.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
-#controlDevider {
-    background-image: url("/images/controlDevider.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#controlRight {
-    background-image: url("/images/controlRight.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
-#projectContainer {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-}
-
-#currentProject {
-    width: 40vw;
-    background-color: darkred;
-    background-image: url("");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#nextProject {
-    width: 10vw;
+    padding: 0 2.5vw;
     background-color: blue;
-    background-image: url("");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
+
+    #name {
+        font-weight: 600;
+        font-size: 1.5vw;
+        margin-top: 1vw;
+        margin-left: -1.5vw;
+    }
+
+        /* Detail Text */
+
+            #detailTextHolder {
+                width: 10vw;
+                float: right;
+            }
+
+            .detailText {
+                margin: 0;
+                font-weight: 500;
+                text-align: right;
+                font-size: 1vw;
+            }
+
+
+        /* Module Detail */
+
+            #moduleDetailHolder {
+                position: absolute;
+                top: 30vh;
+                width: 30vw;
+            }
+
+            #moduleName {
+                font-family: 'Playfair Display', serif;
+                margin: 0;
+                font-size: 4vw;
+                max-width: 30vw;
+            }
+
+            #moduleDate {
+                font-family: 'Playfair Display', serif;
+                font-size: 1.5vw;
+                margin: -1vw 0;
+            }
+
+            #moduleBrief {
+                font-size: 1.1vw;
+                max-height: 50vh;
+                margin-top: 3vw;
+                overflow: hidden;
+            }
+
+    #copyrightText {
+        position: absolute;
+        bottom: 0;
+        font-size: 0.75vw;
+        left: 1vw;
+    }
+
+
+/* Main Container */
+
+#mainContainer {
+    width: 60vw;
+    height: 100vh;
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: darkred;
+}
+
+    /* Main Content Holder */
+
+    #mainContentHolder {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+#backToTop:hover {
+    color: #8C8C8C;
+    cursor: pointer;
+}
+
+
+/* Right Container */
+
+#rightContainer {
+    width: 5vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: width 0.25s;
+    background-color: darkgray;
+}
+
+#menuBTN {
+    width: 4vw;
+    height: 4vw;
+    margin: 0.5vw;
+    cursor: pointer;
+    background-color: #262626;
+}
+
+    /* Menu Options */
+
+    #menuOptionsHolder {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        margin-right: 0.5vw;
+    }
+
+    .menuOption {
+        margin: 0;
+    }
+
+    .menuSub {
+        text-align: left;
+        font-weight: 600;
+        margin: 0;
+        margin-top: 0.5vw;
+        margin-bottom: 0.25vw;
+    }
