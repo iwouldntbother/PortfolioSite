@@ -3,7 +3,14 @@ var projectData = {
         {
             title: "MF Gnome",
             subTitle: "Group Project",
-            coverImage: "/db/unit1/0/cover.jpg"
+            coverImage: "/db/unit1/0/cover.jpg",
+            detail: [
+                {
+                    image: "/db/unit1/0/cover.jpg",
+                    subText: "First Sub",
+                    paraText: "First Para"
+                }
+            ]
         }
     ],
 
@@ -11,12 +18,31 @@ var projectData = {
         {
             title: "test1",
             subTitle: "test1sub",
-            coverImage: "/db/unit2/0/cover.jpg"
+            coverImage: "/db/unit2/0/cover.jpg",
+            detail: [
+                {
+                    image: "/db/unit1/0/cover.jpg",
+                    subText: "First Sub",
+                    paraText: "First Para"
+                },
+                {
+                    image: "/db/unit1/0/cover.jpg",
+                    subText: "First Sub",
+                    paraText: "First Para"
+                }
+            ]
         },
         {
             title: "test2",
             subTitle: "test2sub",
-            coverImage: "/db/unit2/1/cover.jpg"
+            coverImage: "/db/unit2/1/cover.jpg",
+            detail: [
+                {
+                    image: "/db/unit1/0/cover.jpg",
+                    subText: "First Sub",
+                    paraText: "First Para"
+                }
+            ]
         }
     ],
 

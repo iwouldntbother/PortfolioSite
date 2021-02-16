@@ -9,6 +9,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    /* height: max-content; */
 }
 
 * {
@@ -22,10 +23,15 @@ body {
     color: #dcdde1;
 }
 
+#scrollContainer {
+    height: 100vh;
+    overflow: visible;
+}
+
 #siteContainer {
     height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     top: 0;
     overflow: hidden;
     display: flex;
@@ -75,11 +81,13 @@ body {
 #lowerInformationContainer h1 {
     margin: 0;
     font-weight: 400;
+    font-size: 2.5vw;
 }
 
 #lowerInformationContainer p {
     margin: 0;
     font-weight: 200;
+    font-size: 1.2vw;
 }
 
 #projectSideBarContainer {
@@ -137,6 +145,7 @@ body {
 
 #pageNo {
     font-weight: 300;
+    font-size: 2vw;
 }
 
 #controls div {
@@ -210,21 +219,29 @@ body {
 
 #projectDetailContainer {
     width: 100vw;
-    height: 200vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
+    /* position: absolute; */
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    overflow: visible;
 }
 
 
 #informationContainer {
     position: sticky;
-    top: 0;
+    top: 2.5vw;
     width: 40vw;
-    /* height: 20vh; */
+    height: 20vw;
     margin-top: 20vw;
+    margin-right: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+    z-index: 1000;
 }
 
 #informationContainer #workTitle {
@@ -232,6 +249,7 @@ body {
     font-size: 5vw;
     margin: 0;
     margin-left: 1vw;
+    transition: margin-top 0.25s;
 }
 
 #informationContainer #workSubTitle {
@@ -239,13 +257,59 @@ body {
     font-size: 1.75vw;
     margin: 0;
     margin-left: 1vw;
-    margin-top: -3vh;
+    margin-top: -2vw;
+}
+
+#projectDetailTextHolder {
+    margin-left: 1vw;
+    position: sticky;
+    top: 50vw;
+}
+
+#projectDetailSub {
+    overflow: hidden;
+    height: min-content;
+}
+
+#projectDetailSub h2 {
+    font-weight: 500;
+    font-size: 1.75vw;
+    transition: 0.25s;
+}
+
+#projectDetailPara {
+    overflow: hidden;
+    height: min-content;
+}
+
+#projectDetailPara p {
+    font-weight: 300;
+    font-size: 1vw;
+    transition: 0.25s;
 }
 
 #projectDetailHolder {
     position: absolute;
-    top: calc(100vh + 10vw);
-    padding-left: 1vw;
+    top: 100vh;
+    /* padding-left: 1vw; */
+    width: 49vw;
+    right: 0;
+    background-color: #2f3640;
+}
+
+.detailImageHolder {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detailImageHolder img {
+    max-width: 45vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
 }
 
 #copyright {

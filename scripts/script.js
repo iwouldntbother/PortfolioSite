@@ -37,8 +37,10 @@ function loadProject(unit, projectID) {
     var titleData = projectData[unit][projectID].title
     var subTitleData = projectData[unit][projectID].subTitle
 
-    title.innerHTML = titleData
-    subTitle.innerHTML = subTitleData
+    // title.innerHTML = titleData
+    // subTitle.innerHTML = subTitleData
+
+    textAnim(titleData, subTitleData);
 
     currentPreview.style.backgroundImage = "url('" + projectData[unit][projectID].coverImage + "')"
 
@@ -52,8 +54,22 @@ function loadProject(unit, projectID) {
         nextPreview.style.pointerEvents = "all";
     }
 
+    loadProjectDetail(unit, projectID)
+
 }
 
+function loadProjectDetail(unit, projectID) {
+    var detailHolder = document.getElementById("projectDetailHolder")
+    var detail = projectData[unit][projectID].detail
+
+    detailHolder.innerHTML = "";
+    for (i=0; i<detail.length; i++) {
+        detailHolder.innerHTML += "<div id=\"image"+i+"\" class=\"detailImageHolder\"><img src='"+detail[i].image+"'></div>"
+    }
+
+    document.getElementById("scrollContainer").style.height = 100*detail.length + "vh"
+
+}
 
 function updateArrows() {
 
@@ -111,22 +127,97 @@ function init() {
 
 init()
 
+function textAnim(newTtitle, newSub) {
+    var title = document.getElementById("workTitle");
+    var sub = document.getElementById("workSubTitle");
+    title.style.marginTop = "15vw";
+    setTimeout(function(){
+        title.innerHTML = newTtitle;
+        sub.innerHTML = newSub;
+        title.style.marginTop = "0vw";
+    }, 250)
+}
+
+function detailTextChanger(newSub, newPara) {
+    console.log("Chnageing text")
+    var sub = document.getElementById("projectDetailSub").firstChild
+    var para = document.getElementById("projectDetailPara").firstChild
+
+    sub.style.marginTop = "5%"
+    sub.style.marginBottom = "-5%"
+    para.style.marginTop = "15%"
+    para.style.marginBottom = "-15%"
+    
+    setTimeout(function(){
+        sub.innerHTML = newSub;
+        para.innerHTML = newPara;
+        sub.style.marginTop = "0%"
+        sub.style.marginBottom = "0%"
+        para.style.marginTop = "0%"
+        para.style.marginBottom = "0%"
+    }, 250)
+}
 
 // TODO
 
-// 1. Make arrows work
+// 1. 
 
-// 2. Plan for only 1 project (Covers)
+// 2. 
 
-// 3. Get Covers loading
+// 3. 
 
+var currentImageID;
 
-window.addEventListener("scroll", function(){
-    var remap = (1 - (window.scrollY / window.innerHeight)) * 1.2;
-    if (window.scrollY <= window.innerHeight) {
-        // console.log((1-(window.scrollY / window.innerHeight))*2)
-        if (remap <= 1) {
-            document.getElementById("siteContainer").style.opacity = remap;
+// document.getElementById("projectDetailContainer").addEventListener("scroll", function(){
+    window.addEventListener("scroll", function(){
+//     var remap = (1 - (window.scrollY / window.innerHeight)) * 1.2;
+//     if (window.scrollY <= window.innerHeight) {
+//         // console.log((1-(window.scrollY / window.innerHeight))*2)
+//         if (remap <= 1) {
+//             document.getElementById("siteContainer").style.opacity = remap;
+//         }
+//     }
+
+    
+    
+    var images = document.getElementsByClassName("detailImageHolder")
+    // console.log(images.length)
+    for (i=0; i<images.length; i++) {
+        var disToTop = images[i].getBoundingClientRect().top
+        console.log(disToTop)
+
+        if (disToTop <= window.innerHeight / 2 && currentImageID != i) {
+            currentImageID = i
+            // console.log(projectData[currentUnit][currentProject].detail[i].subText)
+            detailTextChanger(projectData[currentUnit][currentProject].detail[i].subText, projectData[currentUnit][currentProject].detail[i].paraText)
+        } else if (disToTop > window.innerHeight / 2 && currentImageID == i) {
+            detailTextChanger("", "")
+            currentImageID = null;
         }
+
     }
+
 })
+
+
+function scroller(event){
+    scrollable=document.getElementById("projectDetailContainer");
+    switch(event.deltaMode){
+      case 0: 		//DOM_DELTA_PIXEL		Chrome
+        scrollable.scrollTop+=event.deltaY
+        scrollable.scrollLeft+=event.deltaX
+        break;
+      case 1: 		//DOM_DELTA_LINE		Firefox
+        scrollable.scrollTop+=15*event.deltaY
+        scrollable.scrollLeft+=15*event.deltaX
+        break;
+      case 2: 		//DOM_DELTA_PAGE
+        scrollable.scrollTop+=0.03*event.deltaY
+        scrollable.scrollLeft+=0.03*event.deltaX
+        break;
+    }
+    event.stopPropagation();
+    // event.preventDefault()
+  }
+  
+//   document.onwheel = scroller;
