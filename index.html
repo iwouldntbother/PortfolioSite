@@ -7,6 +7,45 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="bg">
+
+    <div id="mainContainer">
+
+        <div id="mainContentHolder">
+            <div class="listSub">
+                <h1>Unit 1</h1>
+            </div>
+
+            <div class="listItem" id="unit1" onmouseover="showCover(this.id)" onmouseout="hideCover()">
+                <h1 class="listText">MF Gnome</h1>
+            </div>
+
+            
+
+            <div class="listSub">
+                <h1>Unit 2</h1>
+            </div>
+
+            <div class="listItem" id="unit1" onmouseover="showCover(this.id)" onmouseout="hideCover()">
+                <h1 class="listText">Reading and Writing (RAW)</h1>
+            </div>
+
+            <div class="listItem" id="unit1" onmouseover="showCover(this.id)" onmouseout="hideCover()">
+                <h1 class="listText">Image</h1>
+            </div>
+
+            <div class="listItem" id="unit1" onmouseover="showCover(this.id)" onmouseout="hideCover()">
+                <h1 class="listText">Creative Computing</h1>
+            </div>
+
+            
+        </div>
+
+        <p id="backToTop" class="text">Back to Top</p>
+
+        <img id="mouseIMG" src="">
+
+    </div>
+
     <div id="siteContainer">
 
             <div id="leftContainer">
@@ -29,15 +68,7 @@
 
             </div>
 
-            <div id="mainContainer">
 
-                <div id="mainContentHolder">
-
-                </div>
-
-                <p id="backToTop" class="text">Back to Top</p>
-
-            </div>
 
             <div id="rightContainer" class="bgInverted">
 
@@ -45,17 +76,21 @@
 
                 <div id="menuOptionsHolder">
                     <p class="menuTrans menuOption textInverted">Home</p>
-                    <p class="menuTrans menuSub textInverted">Units</p>
-                    <p class="menuTrans menuOptionChild textInverted">Unit 1</p>
-                    <p class="menuTrans menuOptionChild textInverted">Unit 2</p>
-                    <p class="menuTrans menuOptionChild textInverted">Unit 3</p>
-                    <p class="menuTrans menuOptionChild textInverted">Unit 4</p>
+                    <p class="menuTrans menuOption textInverted">Unit 1</p>
+                    <p class="menuTrans menuOption textInverted">Unit 2</p>
+                    <p class="menuTrans menuOption textInverted">Unit 3</p>
+                    <p class="menuTrans menuOption textInverted">Unit 4</p>
                 </div>
 
             </div>
 
     </div>
 
+    <div id="loadingScreen">
+        <h1 id="loadingText">Will Westwood</h1>
+    </div>
+
+    <script src="db/projectData.js"></script>
     <script src="scripts/script.js"></script>
 
 </body>

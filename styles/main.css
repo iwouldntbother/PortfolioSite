@@ -42,6 +42,12 @@
         font-family: 'Poppins', sans-serif;
         background-color: #262626;
         color: #D9D9D9;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
     }
 
     * {
@@ -54,10 +60,12 @@
 #siteContainer {
     height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     display: flex;
     flex-direction: row;
+    z-index: 100;
+    pointer-events: none;
 }
 
 
@@ -68,6 +76,7 @@
     height: 100vh;
     padding: 0 2.5vw;
     background-color: blue;
+    pointer-events: all;
 }
 
     #name {
@@ -132,12 +141,15 @@
 
 #mainContainer {
     width: 60vw;
-    height: 100vh;
+    height: 1000vh;
     padding: 0 5vw;
+    position: absolute;
+    left: 35vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: darkred;
+    z-index: 10;
 }
 
     /* Main Content Holder */
@@ -153,6 +165,35 @@
     cursor: pointer;
 }
 
+#mouseIMG {
+    max-width: 30vw;
+    max-height: 30vh;
+    position: absolute;
+    margin-left: -35vw;
+    pointer-events: none;
+}
+
+.listSub {
+    margin: 1vw 0 0 0;
+}
+
+.listSub h1 {
+    margin: 0;
+}
+
+.listItem {
+    cursor: pointer;
+    margin: 0 1vw;
+    padding-right: 2vw;
+    width: fit-content;
+}
+
+.listText {
+    pointer-events: none;
+    margin: 0;
+    font-weight: 300;
+    font-size: 1.5vw;
+}
 
 /* Right Container */
 
@@ -166,6 +207,7 @@
     align-items: flex-end;
     transition: width 0.25s;
     background-color: darkgray;
+    pointer-events: all;
 }
 
 #menuBTN {
@@ -181,18 +223,14 @@
     #menuOptionsHolder {
         display: flex;
         flex-direction: column;
-        text-align: left;
-        padding-left: 2vw;
+        text-align: center;
+        align-items: center;
         margin-right: 0.5vw;
         position: absolute;
         left: 0;
         top: 5vw;
-        width: 20vw;
+        width: 10vw;
         font-size: 1.3vw;
-    }
-
-    #menuOptionsHolder:nth-child(n) {
-        transition-delay: padding-left calc(0.1 * n);
     }
 
     .menuTrans {
@@ -207,15 +245,27 @@
         cursor: pointer;
     }
 
-    .menuSub {
-        font-weight: 600;
-        margin: 0;
-        margin-top: 0.5vw;
-        margin-bottom: 0.25vw;
-    }
 
-    .menuOptionChild {
-        margin: 0;
-        margin-left: 2vw;
-        cursor: pointer;
-    }
+/* Loading Screen */
+
+#loadingScreen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D9;
+    color: #262626;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#loadingText {
+    font-family: 'Playfair Display', serif;
+    font-size: 5vw;
+}
