@@ -4,11 +4,29 @@ var projectData = {
             title: "MF Gnome",
             subTitle: "Group Project",
             coverImage: "/db/unit1/0/cover.jpg",
+            module: "Group Project",
+            week: "",
+            date: "",
+            brief: "",
             detail: [
                 {
-                    image: "/db/unit1/0/cover.jpg",
+                    type: "image",
+                    source: "/db/unit1/0/cover.jpg"
+                },
+                {
+                    type: "text",
                     subText: "First Sub",
                     paraText: "First Para"
+                },
+                {
+                    type: "link",
+                    link: "https://wwstwd.studio/",
+                    target: "_blank",
+                    text: "TestLink"
+                },
+                {
+                    type: "video",
+                    source: "/somevideo.mp4"
                 }
             ]
         }
@@ -19,14 +37,17 @@ var projectData = {
             title: "test1",
             subTitle: "test1sub",
             coverImage: "/db/unit2/0/cover.jpg",
+            module: "",
+            week: "",
+            date: "",
+            brief: "",
             detail: [
                 {
-                    image: "/db/unit1/0/cover.jpg",
-                    subText: "First Sub",
-                    paraText: "First Para"
+                    type: "image",
+                    source: "/db/unit1/0/cover.jpg",
                 },
                 {
-                    image: "/db/unit1/0/cover.jpg",
+                    type: "text",
                     subText: "First Sub",
                     paraText: "First Para"
                 }
@@ -36,11 +57,14 @@ var projectData = {
             title: "test2",
             subTitle: "test2sub",
             coverImage: "/db/unit2/1/cover.jpg",
+            module: "",
+            week: "",
+            date: "",
+            brief: "",
             detail: [
                 {
-                    image: "/db/unit1/0/cover.jpg",
-                    subText: "First Sub",
-                    paraText: "First Para"
+                    type: "image",
+                    source: "/db/unit1/0/cover.jpg"
                 }
             ]
         }
