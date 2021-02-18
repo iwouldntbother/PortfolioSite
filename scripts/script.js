@@ -1,32 +1,68 @@
-var menuOpen = false;
-
 document.getElementById("menuBTN").addEventListener("click", function() {
-    // console.log("menuExpand")
-    toggleMenu()
+    lightSwitch()
 })
 
-function toggleMenu() {
+var colourMode = "dark"
+var lightCol = "#D9D9D9"
+var darkCol = "#262626"
 
-    var menuOptions = document.getElementsByClassName("menuTrans");
-    // console.log(menuOptions)
+function lightSwitch(mode) {
 
-    if (menuOpen) {
-        menuOpen = false;
-        document.getElementById("rightContainer").style.width = "5vw";
+    var bgs = document.querySelectorAll(".bg");
+    var texts = document.querySelectorAll(".text");
 
-        for (let option of menuOptions) {
-            option.style.paddingLeft = "10vw";
+    if (!mode) {
+        if (colourMode == "dark") {
+            bgs.forEach(bg => {
+                bg.style.backgroundColor = lightCol;
+            })
+
+            texts.forEach(text => {
+                text.style.color = darkCol;
+            })
+            colourMode = "light"
+        } else if (colourMode == "light") {
+            bgs.forEach(bg => {
+                bg.style.backgroundColor = darkCol;
+            })
+
+            texts.forEach(text => {
+                text.style.color = lightCol;
+            })
+            colourMode = "dark"
         }
-
     } else {
-        menuOpen = true;
-        document.getElementById("rightContainer").style.width = "10vw";
-        
-        for (let option of menuOptions) {
-            option.style.paddingLeft = "0vw";
-        }
+        if (mode == "light") {
+            bgs.forEach(bg => {
+                bg.style.backgroundColor = lightCol;
+            })
 
+            texts.forEach(text => {
+                text.style.color = darkCol;
+            })
+            colourMode = "light"
+        } else if (mode == "dark") {
+            bgs.forEach(bg => {
+                bg.style.backgroundColor = darkCol;
+            })
+
+            texts.forEach(text => {
+                text.style.color = lightCol;
+            })
+            colourMode = "dark"
+        } else {
+            console.log("Error - Colour mode not recognised")
+        }
     }
+}
+
+function pageSweep() {
+    let rightContainer = document.getElementById("rightContainer")
+
+    rightContainer.style.width = "100vw"
+    setTimeout(() => {
+        rightContainer.style.width = "5vw"
+    }, 500)
 }
 
 function loadingScreen() {
