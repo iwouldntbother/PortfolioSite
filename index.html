@@ -4,63 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WWSTWD - GCD Portfolio</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="styles/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 700px)" href="styles/main.css">
 </head>
-<body>
+<body class="bg">
+
+    
+
     <div id="siteContainer">
 
-        <div id="mainContainer">
-            <div id="leftConatiner">
+            <div id="leftContainer">
             
-                <div id="topBarContainer">
-                    <h1>Will Westwood.</h1>
-                </div>  
-            
-                <div id="informationContainer">
-                    <h1 id="workTitle">MF Gnome</h1>
-                    <h1 id="workSubTitle">Group Project</h1>
+                <h1 id="name" class="text">Will Westwood</h1>    
+
+                <div id="detailTextHolder">
+                    <p id="detailUnit" class="detailText text">CSM</p>
+                    <p id="detailModule" class="detailText text">GCD</p>
+                    <p id="detailWeek" class="detailText text">Year 1</p>
                 </div>
 
-                <div id="lowerInformationContainer">
-                    <h1>About</h1>
-                    <p>This site functions as a blog or portfolio showing my work in Graphic Communication Design at Central Saint Martins.</p>
-                    <span>Copyright © 2020. WWSTWD. All rights reserved</span>
+                <div id="moduleDetailHolder">
+                    <h1 id="moduleName" class="text">Will Westwood</h1>
+                    <p id="moduleDate" class="text">GCD Portfolio</p>
+                    <p id="moduleBrief" class="text">I'm Will, a Graphic Design student at Central Saint Martins. I specialise in web design and development, 3D and digital design work.
+                        <br><br>This is a collection and timeline of my work at Central Saint Martins on the Graphic Communication Design course.</p>
                 </div>
+
+                <p id="copyrightText" class="text bg">Copyright © 2020. WWSTWD. All rights reserved</p>
 
             </div>
 
-            <div id="projectSideBarContainer">
-                <div id="unitListHolder">
-                    <h1 class="selected">Unit 1</h1>
-                    <h1 class="deselected">Unit 2</h1>
-                    <h1 class="deselected">Unit 3</h1>
-                    <h1 class="deselected">Unit 4</h1>
+
+
+            <div id="rightContainer" class="bgInverted">
+
+                <div id="menuBTN"></div>
+
+                <div id="menuOptionsHolder">
+                    <p class=" menuOption textInverted" onclick="pageSweep(); setTimeout(() => {init();},500)">Home</p>
                 </div>
-                <div id="controlsContainer">
-                    <div id="controlsHolder">
-                        <h1 id="pageNo">01 / 01</h1>
-                        <div id="controls">
-                            <div id="controlLeft"></div>
-                            <div id="controlDevider"></div>
-                            <div id="controlRight"></div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
-
-        </div>
-
-        <div id="projectContainer">
-
-            <div id="currentProject"></div>
-            <div id="nextProject"></div>
-
-        </div>
-
-        
-
-        </div>
 
     </div>
+
+    <div id="mainContainer">
+
+        <div id="mainContentHolder">
+            
+        </div>
+
+        <p id="backToTop" class="text">Back to Top</p>
+
+        <img id="mouseIMG" src="">
+
+    </div>
+
+    <div id="loadingScreen">
+        <h1 id="loadingText">Will Westwood</h1>
+    </div>
+
+    <script src="db/projectData.js"></script>
+    <script src="scripts/script.js"></script>
+
 </body>
 </html>

@@ -63,12 +63,9 @@
 /* Site Container */
 
 #siteContainer {
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-    overflow: hidden;
+    width: 95vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     z-index: 100;
     pointer-events: none;
 }
@@ -77,16 +74,17 @@
 /* Left Container Detail */
 
 #leftContainer {
-    width: 35vw;
-    height: 100vh;
+    width: 95vw;
     padding: 0 2.5vw;
     /* background-color: blue; */
     pointer-events: all;
+    display: flex;
+    flex-direction: column;
 }
 
     #name {
         font-weight: 600;
-        font-size: 1.5vw;
+        font-size: 3vw;
         margin-top: 1vw;
         margin-left: -1.5vw;
     }
@@ -96,59 +94,64 @@
             #detailTextHolder {
                 width: 10vw;
                 float: right;
+                align-self: flex-end;
+                margin-right: 5vw;
             }
 
             .detailText {
                 margin: 0;
                 font-weight: 500;
                 text-align: right;
-                font-size: 1vw;
+                font-size: 2vw;
             }
 
 
         /* Module Detail */
 
             #moduleDetailHolder {
-                position: absolute;
-                top: 30vh;
-                width: 30vw;
+                /* position: absolute; */
+                margin-top: 5vh;
+                margin-bottom: 5vh;
+                width: 60vw;
+                align-self: center;
             }
 
             #moduleName {
                 font-family: 'Playfair Display', serif;
                 margin: 0;
-                font-size: 4vw;
-                max-width: 30vw;
+                font-size: 8vw;
+                max-width: 60vw;
             }
 
             #moduleDate {
                 font-family: 'Playfair Display', serif;
-                font-size: 1.5vw;
+                font-size: 3vw;
                 margin: -1vw 0;
             }
 
             #moduleBrief {
-                font-size: 1.1vw;
+                font-size: 2vw;
+                max-width: 60vw;
                 max-height: 50vh;
                 margin-top: 3vw;
                 overflow: hidden;
             }
 
     #copyrightText {
-        position: absolute;
+        position: fixed;
         bottom: 0;
-        font-size: 0.75vw;
+        font-size: 1.75vw;
         left: 1vw;
+        width: 95vw;
     }
 
 
 /* Main Container */
 
 #mainContainer {
-    width: 60vw;
+    max-width: 95vw;
     padding: 0 5vw;
     position: absolute;
-    left: 35vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,7 +164,8 @@
     #mainContentHolder {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 85vw;
+        overflow-x: hidden;
     }
 
 #backToTop {
@@ -182,19 +186,19 @@
 }
 
 .listSub {
-    margin: 1vw 0 0 0;
+    margin: 3vw 0 0 0;
 }
 
 .listSub h1 {
     margin: 0;
     font-weight: 700;
-    font-size: 2vw;
+    font-size: 4vw;
     font-family: 'Playfair Display', serif;
 }
 
 .listItem {
     cursor: pointer;
-    margin: 0 1vw;
+    margin: 0 3vw;
     padding-right: 2vw;
     width: fit-content;
 }
@@ -203,7 +207,7 @@
     pointer-events: none;
     margin: 0;
     font-weight: 300;
-    font-size: 1.5vw;
+    font-size: 3vw;
 }
 
 /* Right Container */
@@ -211,7 +215,7 @@
 #rightContainer {
     width: 5vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -219,6 +223,7 @@
     transition: width 0.5s;
     background-color: #8C8C8C;
     pointer-events: all;
+    z-index: 100;
 }
 
 #menuBTN {
@@ -239,9 +244,10 @@
         /* margin-right: 0.5vw; */
         position: absolute;
         right: 0;
-        top: 5vw;
+        top: 6.5vw;
         width: 5vw;
-        font-size: 1.3vw;
+        font-size: 2vw;
+        font-weight: 600;
     }
 
     .menuTrans {
@@ -279,37 +285,37 @@
 
 #loadingText {
     font-family: 'Playfair Display', serif;
-    font-size: 5vw;
+    font-size: 8vw;
 }
 
 
 /* Project Detail */
 
 .projectDetailTitle {
-    font-size: 3.5vw;
+    font-size: 5vw;
     font-family: 'Playfair Display', serif;
 }
 
 .projectDetailIMG {
-    width: 100%;
+    max-width: 85vw;
     max-height: 60vh;
     object-fit: contain;
 }
 
 .projectDetailSub {
-    font-size: 2vw;
+    font-size: 4vw;
     font-weight: 600;
     margin: 0;
     margin-top: 2vw;
 }
 
 .projectDetailPara {
-    font-size: 1.2vw;
+    font-size: 2.5vw;
     margin: 0;
 }
 
 .projectDetailLink {
-    font-size: 1.2vw;
+    font-size: 2.5vw;
     margin: 0;
     text-decoration: none;
     font-style: italic;
@@ -321,7 +327,7 @@
 }
 
 .projectDetailVideo {
-    width: 100%;
+    max-width: 85vw;
     max-height: 60vh;
     object-fit: contain;
 }
