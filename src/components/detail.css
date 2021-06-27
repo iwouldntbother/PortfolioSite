@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+}
+
+.detailHolder {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid #ddd 0.25vw;
+  border-top: solid #ddd 0.25vw;
+}
+
+.detailLeft {
+  width: 30vw;
+  /* background: cyan; */
+  position: relative;
+  border-right: solid #ddd 0.25vw;
+}
+
+.detailLeftSticky {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  padding: 2.5vw;
+  padding-top: 2vw;
+}
+
+.detailLeftSticky h1 {
+  margin: 0;
+  width: 25vw;
+  font-size: 4vw;
+}
+
+.detailLeftSticky p {
+  margin: 0;
+  width: 25vw;
+  font-size: 2vw;
+}
+
+.detailRight {
+  width: 70vw;
+  /* background: darkblue; */
+  padding: 0 2vw;
+  display: flex;
+  flex-direction: column;
+  border-left: solid #ddd 0.25vw;
+}
+
+.detailTitle {
+  font-size: 3vw;
+  margin: 1vw 0;
+}
+
+.detailImage {
+  width: 68vw;
+  /* background: darkcyan; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1vw 0;
+}
+
+.detailImage img {
+  max-height: 80vh;
+  max-width: 68vw;
+  width: auto;
+}
+
+.detailSub {
+  font-size: 2vw;
+  margin: 1vw 0;
+}
+
+.detailText {
+  font-size: 1.25vw;
+  margin: 1vw 0;
+}
+
+.detailLink {
+  font-size: 1.25vw;
+  text-decoration: none;
+}

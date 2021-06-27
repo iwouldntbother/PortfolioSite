@@ -1,5 +1,10 @@
 .footerContainer {
   width: 100vw;
   height: 10vh;
-  background-color: blueviolet;
+  /* background: violet; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid #ddd 0.25vw;
 }

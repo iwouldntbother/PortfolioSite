@@ -1,18 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import MenuBar from './components/menuBar.jsx';
-import Gallery from './components/gallery.jsx';
-import Footer from './components/footer.jsx';
+import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
-    <React.StrictMode>
-      <MenuBar />
-      <Gallery />
-      <Footer />
-    </React.StrictMode>,
-  document.getElementById('root')
+    <HashRouter>
+      <App />
+    </HashRouter>
+  ,document.getElementById('root')
 );
 
-reportWebVitals();
+
+
+reportWebVitals(console.log());
