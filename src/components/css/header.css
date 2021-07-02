@@ -6,8 +6,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid #ddd 0.25vw;
+  /* border-bottom: solid #ddd 0.25vw; */
 }
+
 
 .headerTitle {
   font-size: 1.75vw;
@@ -24,4 +25,22 @@
 .headerBTN {
   font-size: 1vw;
   margin-right: 2vw;
+  text-decoration: none;
+}
+
+.switchHolder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightSwitch {
+  /* background-color: orange; */
+  width: 1.25vw;
+  height: 1.25vw;
+  border-radius: 1vw;
+  /* border: solid 0.15vw black; */
+  margin-right: 2vw;
+  cursor: pointer;
 }

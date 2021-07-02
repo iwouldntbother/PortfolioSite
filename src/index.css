@@ -22,3 +22,28 @@ code {
 #root {
   height: 100vh;
 }
+
+:root {
+  --text: black;
+  --bg: white;
+}
+
+.textColour {
+  color: var(--text);
+  transition: color 0.5s;
+}
+
+.bgColour {
+  background-color: var(--bg);
+  transition: background-color 0.5s;
+}
+
+.textColourInvert {
+  color: var(--bg);
+  transition: color 0.5s;
+}
+
+.bgColourInvert {
+  background-color: var(--text);
+  transition: background-color 0.5s;
+}

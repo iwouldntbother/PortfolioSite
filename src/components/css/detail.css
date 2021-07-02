@@ -6,15 +6,15 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: row;
-  border-bottom: solid #ddd 0.25vw;
-  border-top: solid #ddd 0.25vw;
+  /* border-bottom: solid #ddd 0.25vw; */
+  /* border-top: solid #ddd 0.25vw; */
 }
 
 .detailLeft {
   width: 30vw;
   /* background: cyan; */
   position: relative;
-  border-right: solid #ddd 0.25vw;
+  /* border-right: solid #ddd 0.25vw; */
 }
 
 .detailLeftSticky {
@@ -41,9 +41,10 @@ body {
   width: 70vw;
   /* background: darkblue; */
   padding: 0 2vw;
+  padding-bottom: 2vw;
   display: flex;
   flex-direction: column;
-  border-left: solid #ddd 0.25vw;
+  /* border-left: solid #ddd 0.25vw; */
 }
 
 .detailTitle {

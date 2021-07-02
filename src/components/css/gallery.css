@@ -17,8 +17,8 @@ body {
   /* grid-auto-columns: 20%; */
   grid-auto-rows: 18.4vw;
   grid-auto-flow: dense;
-  border-right: solid #ddd 0.25vw;
-  border-left: solid #ddd 0.25vw;
+  /* border-right: solid #ddd 0.25vw; */
+  /* border-left: solid #ddd 0.25vw; */
 }
 
 .span-h-2 {
@@ -35,7 +35,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  border: solid #ddd 0.25vw;
+  text-decoration: none;
+  /* border: solid #ddd 0.25vw; */
 }
 
 .gItemHolder:hover .gItemFader {

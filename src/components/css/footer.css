@@ -6,5 +6,5 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-top: solid #ddd 0.25vw;
+  /* border-top: solid #ddd 0.25vw; */
 }

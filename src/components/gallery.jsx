@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import db from '../db/db.js'
-import './gallery.css';
+import './css/gallery.css';
 
 class gItem{
   // super(){}
@@ -15,16 +15,23 @@ class gItem{
 }
 
 
-function GItemCollection() {
+function GItemCollection(props) {
   
+  // let tag = this.props.tag
   // const history = useHistory();
   // const location = useLocation();
+
+  let match = useRouteMatch();
+  // console.log(match)
 
   var gItemsRenderArray = [];
   // console.log(db.galleryItems.length)
   for(var i=0; i<db.galleryItems.length; i++) {
-    gItemsRenderArray.push(new gItem(db.galleryItems[i].id,db.galleryItems[i].size,db.galleryItems[i].cover,db.galleryItems[i].title,db.galleryItems[i].date))
+    if (props.tag === "all" || db.galleryItems[i].tag === props.tag) {
+      gItemsRenderArray.push(new gItem(db.galleryItems[i].id,db.galleryItems[i].size,db.galleryItems[i].cover,db.galleryItems[i].title,db.galleryItems[i].date))
+    }
   }
+  // console.log(gItemsRenderArray)
 
   // function handleClick(id) {
   //   history.push('/'+id);
@@ -34,7 +41,7 @@ function GItemCollection() {
     <div className="gItemsContainer">
       {gItemsRenderArray.map((item) => {
 
-        return <Link to={'/'+item.id} key={item.id} id={"gItem"+item.id} 
+        return <Link to={`${match.url.replace('/'+match.params.id, "")}/${item.id}`} key={item.id} id={"gItem"+item.id} 
                   style={{backgroundImage: "url('"+process.env.PUBLIC_URL+item.cover+"')"}}
                   className={"gItemHolder "+item.size}>
             <div className="gItemFader"></div>
@@ -49,9 +56,6 @@ function GItemCollection() {
 }
 
 
-
-
-
-GItemCollection()
+// GItemCollection()
 
 export default GItemCollection;

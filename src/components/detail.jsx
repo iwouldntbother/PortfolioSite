@@ -1,6 +1,6 @@
 import React from 'react';
 import db from '../db/db';
-import './detail.css';
+import './css/detail.css';
 
 class Detail extends React.Component {
   render() {
@@ -9,8 +9,8 @@ class Detail extends React.Component {
       <div className="detailHolder">
         <div className="detailLeft">
           <div className="detailLeftSticky">
-            <h1>{ db.galleryItems[Number(this.props.detailID)].title }</h1>
-            <p>{ db.galleryItems[Number(this.props.detailID)].date }</p>
+            <h1 className={ 'textColour' }>{ db.galleryItems[Number(this.props.detailID)].title }</h1>
+            <p className={ 'textColour' }>{ db.galleryItems[Number(this.props.detailID)].date }</p>
           </div>
         </div>
         <div className="detailRight">
@@ -26,15 +26,15 @@ class MainDetails extends Detail {
   renderSwitch(param, data) {
     switch(param) {
       case "title":
-        return <h1 className="detailTitle">{ data }</h1>
+        return <h1 className="detailTitle textColour">{ data }</h1>
       case "image":
         return <div className="detailImage"><img src={process.env.PUBLIC_URL + data.src} alt={data.alt}></img></div>;
       case "sub":
-        return <h2 className="detailSub">{ data }</h2>
+        return <h2 className="detailSub textColour">{ data }</h2>
       case "text":
-        return <p className="detailText">{ data }</p>
+        return <p className="detailText textColour">{ data }</p>
       case "link":
-        return <a className="detailLink" href={data.url} target={data.target}>{data.text}</a>
+        return <a className="detailLink textColour" href={data.url} target={data.target}>{data.text}</a>
       default:
         return console.log("Error");
     }

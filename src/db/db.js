@@ -2,6 +2,7 @@ const db = {
   "galleryItems": [
     {
       id: "0000",
+      tag: "university",
       size: "span-h-2 span-v-2",
       cover: "/imageDB/0000/cover0000.jpg",
       title: "title0",
@@ -39,6 +40,7 @@ const db = {
     },
     {
       id: "0001",
+      tag: "university",
       size: "span-h-2",
       cover: "cover.jpg",
       title: "title1",
@@ -46,6 +48,7 @@ const db = {
     },
     {
       id: "0002",
+      tag: "personal",
       size: "span-v-2",
       cover: "cover.jpg",
       title: "title2",
@@ -53,6 +56,7 @@ const db = {
     },
     {
       id: "0003",
+      tag: "personal",
       size: "",
       cover: "cover.jpg",
       title: "title3",
@@ -60,6 +64,7 @@ const db = {
     },
     {
       id: "0004",
+      tag: "personal",
       size: "",
       cover: "cover.jpg",
       title: "title4",
