@@ -1,0 +1,21 @@
+#aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+#aboutContainer img {
+  max-height: 40vh;
+}
+
+#aboutTitle {
+  font-size: 10vw;
+}
+
+#aboutPara {
+  font-size: 4vw;
+  text-align: center;
+  max-width: 80vw;
+}

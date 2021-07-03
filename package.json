@@ -27,11 +27,10 @@
       "react-app/jest",
       "plugin:react-hooks/recommended"
     ],
-    "plugins": [
-    ],
+    "plugins": [],
     "rules": {
-      "react-hooks/rules-of-hooks": "error", 
-      "react-hooks/exhaustive-deps": "warn" 
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
     }
   },
   "browserslist": {
@@ -48,6 +47,6 @@
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.2.0",
-    "gh-pages": "^3.2.0"
+    "gh-pages": "^3.2.3"
   }
 }
