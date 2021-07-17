@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <div>
-    <div className="headerContainer">
+    <div className="headerContainer bgColour">
       <h1 className="headerTitle textColour">Will Westwood</h1>
       <div className="mobileMenuBTN" onClick={() => { menuSwitch() }}>
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1000 1000">
@@ -39,7 +38,6 @@ function Header() {
         </div>
         <div id="lightSwitch" className="bgColourInvert" onClick={() => { switchLights(); }}></div>
       </div>
-    </div>
     </div>
   );
 }

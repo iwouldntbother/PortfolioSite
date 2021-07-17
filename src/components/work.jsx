@@ -31,8 +31,13 @@ function GalleryDetail() {
   
   // eslint-disable-next-line
   let { id } = useParams()
-  let fixedTitle = id.replace("/-/g", " ")
-  let tempID = db.galleryItems.findIndex((x) => x.title === fixedTitle)
+
+  let tempID;
+
+  if (id) {
+    let fixedTitle = id.replace("/-/g", " ")
+    tempID = db.galleryItems.findIndex((x) => x.title === fixedTitle)
+  }
   // console.log(id, tempID)
   
   if(id && Number(tempID) < db.galleryItems.length && Number(tempID) >= 0){

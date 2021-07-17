@@ -20,3 +20,26 @@
   text-align: center;
   max-width: 35vw;
 }
+
+@media only screen and (max-width: 600px) {
+
+  #aboutContainer img {
+    max-height: 35vh;
+    margin-bottom: 2vw;
+  }
+  
+  #aboutTitle {
+    font-size: 6vw;
+  }
+  
+  #aboutPara {
+    font-size: 3vw;
+    text-align: center;
+    max-width: 50vw;
+  }
+
+
+
+
+
+}

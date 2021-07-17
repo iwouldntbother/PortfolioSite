@@ -56,7 +56,7 @@ class MainDetails extends Detail {
 
 function DBError() {
   return (
-      <p>An error occurred while trying to retrieve data from the database,<br></br>were sorry for the inconvenience.</p>
+      <p className="textColour">An error occurred while trying to retrieve data from the database,<br></br>were sorry for the inconvenience.</p>
     );
 }
 

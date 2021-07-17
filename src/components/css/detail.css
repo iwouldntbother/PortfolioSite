@@ -81,3 +81,91 @@ body {
   font-size: 1.25vw;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 600px) {
+
+  .detailHolder {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    /* border-bottom: solid #ddd 0.25vw; */
+    /* border-top: solid #ddd 0.25vw; */
+  }
+  
+  .detailLeft {
+    width: 100vw;
+    /* background: cyan; */
+    position: relative;
+    /* border-right: solid #ddd 0.25vw; */
+  }
+  
+  .detailLeftSticky {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    padding: 2.5vw;
+    padding-top: 2vw;
+  }
+  
+  .detailLeftSticky h1 {
+    margin: 0;
+    width: 25vw;
+    font-size: 8vw;
+  }
+  
+  .detailLeftSticky p {
+    margin: 0;
+    width: 25vw;
+    font-size: 3.5vw;
+  }
+  
+  .detailRight {
+    width: 100vw;
+    /* background: darkblue; */
+    padding: 0 2vw;
+    padding-bottom: 2vw;
+    display: flex;
+    flex-direction: column;
+    /* border-left: solid #ddd 0.25vw; */
+  }
+  
+  .detailTitle {
+    font-size: 5vw;
+    margin: 1vw 0;
+  }
+  
+  .detailImage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vw 0;
+  }
+  
+  .detailImage img {
+    max-height: 70vh;
+    max-width: 98vw;
+    width: auto;
+  }
+  
+  .detailSub {
+    font-size: 3vw;
+    margin: 1vw 0;
+  }
+  
+  .detailText {
+    font-size: 2.5vw;
+    margin: 1vw 0;
+  }
+  
+  .detailLink {
+    font-size: 2.5vw;
+    text-decoration: none;
+    color: blue;
+  }
+
+
+
+
+
+}
