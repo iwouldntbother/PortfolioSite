@@ -41,7 +41,7 @@ function GItemCollection(props) {
     <div className="gItemsContainer">
       {gItemsRenderArray.map((item) => {
 
-        return <Link to={`${match.url.replace('/'+match.params.id, "")}/${item.id}`} key={item.id} id={"gItem"+item.id} 
+        return <Link to={`${match.url.replace('/'+match.params.id, "")}/${createLinkTitle(item.title)}`} key={item.id} id={"gItem"+item.id} 
                   style={{backgroundImage: "url('"+process.env.PUBLIC_URL+item.cover+"')"}}
                   className={"gItemHolder "+item.size}>
             <div className="gItemFader"></div>
@@ -55,6 +55,9 @@ function GItemCollection(props) {
   );
 }
 
+function createLinkTitle(title) {
+  return title.replace('/ /g', '-')
+}
 
 // GItemCollection()
 

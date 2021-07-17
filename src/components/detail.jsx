@@ -3,6 +3,7 @@ import db from '../db/db';
 import './css/detail.css';
 
 class Detail extends React.Component {
+
   render() {
     return (
       <div>
@@ -14,7 +15,7 @@ class Detail extends React.Component {
           </div>
         </div>
         <div className="detailRight">
-          <MainDetails detailID={this.props.detailID}/>
+          <MainDetails detailID={ this.props.detailID }/>
         </div>
       </div>
       </div>
@@ -51,7 +52,6 @@ class MainDetails extends Detail {
       })
     }
   }
-
 }
 
 function DBError() {

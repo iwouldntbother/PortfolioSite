@@ -5,7 +5,7 @@ const db = {
       tag: "university",
       size: "span-h-2 span-v-2",
       cover: "/imageDB/0000/cover0000.jpg",
-      title: "title0",
+      title: "title 0",
       date: "date",
       detail: [
         {
