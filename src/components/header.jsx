@@ -59,6 +59,13 @@ function switchLights() {
 
 }
 
+const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+if (darkThemeMq.matches) {
+  switchLights();
+} else {
+  // Theme set to light.
+}
+
 let menuOpen = false;
 
 function menuSwitch() {
