@@ -43,7 +43,8 @@ function GItemCollection(props) {
 
         return <Link to={`${match.url.replace('/'+match.params.id, "")}/${createLinkTitle(item.title)}`} key={item.id} id={"gItem"+item.id} 
                   style={{backgroundImage: "url('"+process.env.PUBLIC_URL+item.cover+"')"}}
-                  className={"gItemHolder "+item.size}>
+                  className={"gItemHolder "+item.size}
+                  onClick={() => {scrollTop();}}>
             <div className="gItemFader"></div>
             <div className="gItemDetailsHolder">
               <h1>{item.title}</h1>
@@ -57,6 +58,10 @@ function GItemCollection(props) {
 
 function createLinkTitle(title) {
   return title.replace('/ /g', '-')
+}
+
+function scrollTop() {
+  window.scrollTo(0, 0);
 }
 
 // GItemCollection()
