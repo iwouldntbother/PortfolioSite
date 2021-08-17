@@ -57,13 +57,47 @@ function switchLights() {
     theme = 'light'
   }
 
+  changeCookie()
+
 }
 
+function getCookie() {
+  let name = "theme=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function changeCookie() {
+  if (getCookie().length > 0) {
+    const d = new Date();
+    d.setTime(d.getTime() + (30*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    let theme = getComputedStyle(document.body).getPropertyValue('--bg') === '#212529' ? 'dark' : 'light';
+    document.cookie = "theme=" + theme + ";" + expires + ";path=/";
+  } else {
+    return;
+  }
+}
+
+// console.log(getCookie())
+
 const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-if (darkThemeMq.matches) {
+if (getCookie().length > 0) {
+  if(getCookie() === 'dark') {
+    switchLights();
+  }
+} else if (darkThemeMq.matches) {
   switchLights();
-} else {
-  // Theme set to light.
 }
 
 let menuOpen = false;

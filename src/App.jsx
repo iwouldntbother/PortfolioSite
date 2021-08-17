@@ -8,7 +8,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (<div style={{height: "100vh"}}>
-    <Popup />
+    {/* <Popup /> */}
     <Header />
     
     <Switch>

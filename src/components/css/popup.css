@@ -4,6 +4,8 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  pointer-events: none;
+  z-index: 99999;
 }
 
 .popupHolder {
@@ -11,6 +13,7 @@
   position: fixed;
   bottom: 2vh;
   max-width: 50vw;
+  pointer-events: all;
 }
 
 .popupHolder p {
