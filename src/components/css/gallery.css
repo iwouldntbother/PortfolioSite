@@ -94,8 +94,21 @@ body {
     grid-auto-rows: 50vw;
   }
 
+  .gItemDetailsHolder h1 {
+    font-size: 5vw;
+  }
+  
+  .gItemDetailsHolder p {
+    font-size: 3vw;
+  }
 
-
+  .gItemHolder:hover .gItemFader {
+    opacity: 0;
+  }
+  
+  .gItemHolder:hover .gItemDetailsHolder {
+    opacity: 0;
+  }
 
 
 }

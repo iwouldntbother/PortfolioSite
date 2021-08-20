@@ -3,12 +3,10 @@ import Header from './components/header.jsx';
 import work from './components/work'
 import about from './components/about'
 import contact from './components/contact'
-import Popup from './components/popup';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (<div style={{height: "100vh"}}>
-    {/* <Popup /> */}
     <Header />
     
     <Switch>

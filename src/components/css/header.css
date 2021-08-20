@@ -58,40 +58,41 @@
   .headerContainer {
     position: sticky;
     top: 0;
+    height: 8vh;
     z-index: 100;
   }
 
   .headerTitle {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 
   .mobileMenuBTN {
     display: block;
-    width: 10vw;
-    height: 10vw;
+    width: 8vw;
+    height: 8vw;
     z-index: 1001;
     position: fixed;
-    top: calc(5vh - 5vw);
     right: 3vw;
+    top: calc(4vh - 4vw);
   }
 
   .headerBTNHolder {
     flex-direction: column;
-    height: 65vh;
-    margin-bottom: 10vh;
+    height: 80vh;
+    /* margin-bottom: 10vh; */
     margin-top: 15vh;
   }
   
   .headerBTN {
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: 600;
   }
   
   #lightSwitch {
-    width: 15vw;
-    height: 15vw;
+    width: 10vw;
+    height: 10vw;
     border-radius: 15vw;
-    margin-top: -10vw;
+    /* margin-top: -10vw; */
   }
   
   .switchHolder {
@@ -102,11 +103,12 @@
     position: fixed;
     top: 0;
     right: -100vw;
-    padding-bottom: 10vw;
+    padding-bottom: 10vh;
   }
   
   #mobileMenu {
-    transition: right 0.5s ease-in-out;
+    transition: right 0.5s ease-in-out, background-color 0.5s;
+    overflow: hidden;
   }
 
   .fillTransition {

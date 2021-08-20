@@ -32,7 +32,7 @@ const db = {
           "data": {
                     "url": "https://google.co.uk",
                     "target": "_blank",
-                    "text": "GoogleBitch"
+                    "text": "Link Test"
                   }
         },
         

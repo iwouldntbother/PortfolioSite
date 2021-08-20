@@ -35,8 +35,8 @@ function Header() {
           <Link to={'/work/university'} className="headerBTN textColour" onClick={() => { menuSwitch() }}>University Work</Link>
           <Link to={'/about'} className="headerBTN textColour" onClick={() => { menuSwitch() }}>About</Link>
           <Link to={'/contact'} className="headerBTN textColour" onClick={() => { menuSwitch() }}>Contact</Link>
-        </div>
         <div id="lightSwitch" className="bgColourInvert" onClick={() => { switchLights(); }}></div>
+        </div>
       </div>
     </div>
   );
@@ -106,11 +106,13 @@ function menuSwitch() {
 
   if (menuOpen) {
     document.getElementById("mobileMenu").style.right = "-100vw";
+    document.body.style.overflow = "scroll";
     document.getElementById("menuBTN").style.display = "initial";
     document.getElementById("closeBTN").style.display = "none";
     menuOpen = false;
   } else {
     document.getElementById("mobileMenu").style.right = "0";
+    document.body.style.overflow = "hidden";
     document.getElementById("menuBTN").style.display = "none";
     document.getElementById("closeBTN").style.display = "initial";
     menuOpen = true;
