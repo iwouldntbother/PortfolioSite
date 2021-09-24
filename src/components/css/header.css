@@ -80,7 +80,7 @@
     flex-direction: column;
     height: 80vh;
     /* margin-bottom: 10vh; */
-    margin-top: 15vh;
+    margin-top: 20vh;
   }
   
   .headerBTN {
@@ -103,7 +103,7 @@
     position: fixed;
     top: 0;
     right: -100vw;
-    padding-bottom: 10vh;
+    padding-bottom: 20vh;
   }
   
   #mobileMenu {

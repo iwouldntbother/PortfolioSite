@@ -35,7 +35,7 @@ function Header() {
           <Link to={'/work/university'} className="headerBTN textColour" onClick={() => { menuSwitch() }}>University Work</Link>
           <Link to={'/about'} className="headerBTN textColour" onClick={() => { menuSwitch() }}>About</Link>
           <Link to={'/contact'} className="headerBTN textColour" onClick={() => { menuSwitch() }}>Contact</Link>
-        <div id="lightSwitch" className="bgColourInvert" onClick={() => { switchLights(); }}></div>
+          <div id="lightSwitch" className="bgColourInvert" onClick={() => { switchLights(); }}></div>
         </div>
       </div>
     </div>
