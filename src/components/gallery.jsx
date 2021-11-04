@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
-import db from '../db/db.js'
+import db from '../db/db.json';
 import './css/gallery.css';
 
 class gItem{
@@ -25,10 +25,10 @@ function GItemCollection(props) {
   // console.log(match)
 
   var gItemsRenderArray = [];
-  // console.log(db.galleryItems.length)
-  for(var i=0; i<db.galleryItems.length; i++) {
-    if (props.tag === "all" || db.galleryItems[i].tag === props.tag) {
-      gItemsRenderArray.push(new gItem(db.galleryItems[i].id,db.galleryItems[i].size,db.galleryItems[i].cover,db.galleryItems[i].title,db.galleryItems[i].date))
+  // console.log(db.length)
+  for(var i=0; i<db.length; i++) {
+    if (props.tag === "all" || db[i].tag === props.tag) {
+      gItemsRenderArray.push(new gItem(db[i].id,db[i].size,db[i].cover,db[i].title,db[i].date))
     }
   }
   // console.log(gItemsRenderArray)

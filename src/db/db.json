@@ -1,14 +1,12 @@
-const db = {
-  "galleryItems": [
-    // 0000
+[
     {
-      id: "0000",
-      tag: "university",
-      size: "span-h-2 span-v-2",
-      cover: "/imageDB/0000/cover0000.jpg",
-      title: "title 0",
-      date: "date",
-      detail: [
+      "id": "0000",
+      "tag": "university",
+      "size": "span-h-2 span-v-2",
+      "cover": "/imageDB/0000/cover0000.jpg",
+      "title": "title 0",
+      "date": "date",
+      "detail": [
         {
           "type": "title",
           "data": "Title Switch Test"
@@ -35,19 +33,18 @@ const db = {
                     "target": "_blank",
                     "text": "Link Test"
                   }
-        },
+        }
         
       ]
     },
-    // 0001
     {
-      id: "0001",
-      tag: "university",
-      size: "span-h-2",
-      cover: "/imageDB/0001/0004.jpg",
-      title: "The very best of the memories in my head",
-      date: "19.03.21 - Unit 3",
-      detail: [
+      "id": "0001",
+      "tag": "university",
+      "size": "span-h-2",
+      "cover": "/imageDB/0001/0004.jpg",
+      "title": "The very best of the memories in my head",
+      "date": "19.03.21 - Unit 3",
+      "detail": [
         {
           "type": "title",
           "data": "The very best of the memories in my head"
@@ -127,36 +124,33 @@ const db = {
                     "target": "_blank",
                     "text": "Link Test"
                   }
-        },
+        }
         
       ]
     },
     {
-      id: "0002",
-      tag: "personal",
-      size: "span-v-2",
-      cover: "cover.jpg",
-      title: "title2",
-      date: "date"
+      "id": "0002",
+      "tag": "personal",
+      "size": "span-v-2",
+      "cover": "cover.jpg",
+      "title": "title2",
+      "date": "date"
     },
     {
-      id: "0003",
-      tag: "personal",
-      size: "",
-      cover: "cover.jpg",
-      title: "title3",
-      date: "date"
+      "id": "0003",
+      "tag": "personal",
+      "size": "",
+      "cover": "cover.jpg",
+      "title": "title3",
+      "date": "date"
     },
     {
-      id: "0004",
-      tag: "personal",
-      size: "",
-      cover: "cover.jpg",
-      title: "title4",
-      date: "date"
-    },
+      "id": "0004",
+      "tag": "personal",
+      "size": "",
+      "cover": "cover.jpg",
+      "title": "title4",
+      "date": "date"
+    }
     
-  ]
-}
-
-export default db;
+]

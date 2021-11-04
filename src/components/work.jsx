@@ -1,7 +1,7 @@
 import GItemCollection from './gallery';
 import Detail from './detail';
 import { useParams, Route, Switch } from 'react-router-dom';
-import db from '../db/db.js';
+import db from '../db/db.json';
 
 
 function Work() {
@@ -36,11 +36,11 @@ function GalleryDetail() {
 
   if (id) {
     let fixedTitle = id.replace("/-/g", " ")
-    tempID = db.galleryItems.findIndex((x) => x.title === fixedTitle)
+    tempID = db.findIndex((x) => x.title === fixedTitle)
   }
   // console.log(id, tempID)
   
-  if(id && Number(tempID) < db.galleryItems.length && Number(tempID) >= 0){
+  if(id && Number(tempID) < db.length && Number(tempID) >= 0){
     return (<Detail detailID = {tempID} />);
   }else{
     return null;

@@ -1,6 +1,6 @@
 import React from 'react';
-import db from '../db/db';
 import './css/detail.css';
+import db from '../db/db.json';
 
 class Detail extends React.Component {
 
@@ -10,8 +10,8 @@ class Detail extends React.Component {
       <div className="detailHolder">
         <div className="detailLeft">
           <div className="detailLeftSticky">
-            <h1 className={ 'textColour' }>{ db.galleryItems[Number(this.props.detailID)].title }</h1>
-            <p className={ 'textColour' }>{ db.galleryItems[Number(this.props.detailID)].date }</p>
+            <h1 className={ 'textColour' }>{ db[Number(this.props.detailID)].title }</h1>
+            <p className={ 'textColour' }>{ db[Number(this.props.detailID)].date }</p>
           </div>
         </div>
         <div className="detailRight">
@@ -42,10 +42,10 @@ class MainDetails extends Detail {
   }
 
   render() { 
-    if (!db.galleryItems[Number(this.props.detailID)].detail) {
+    if (!db[Number(this.props.detailID)].detail) {
       return (<DBError />)
     } else {
-      return db.galleryItems[Number(this.props.detailID)].detail.map((item, index) => {
+      return db[Number(this.props.detailID)].detail.map((item, index) => {
         return <div key={ index }>
          {this.renderSwitch(item.type, item.data)}
         </div>
