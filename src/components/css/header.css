@@ -1,6 +1,6 @@
 .headerContainer {
   width: 100vw;
-  height: 10vh;
+  height: 8vh;
   /* background: violet; */
   display: flex;
   flex-direction: row;
@@ -11,7 +11,7 @@
 
 
 .headerTitle {
-  font-size: 1.75vw;
+  font-size: 1.25vw;
   margin-left: 2vw;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .headerBTN {
-  font-size: 1vw;
+  font-size: 0.8vw;
   margin-right: 2vw;
   text-decoration: none;
 }
@@ -37,8 +37,8 @@
 
 #lightSwitch {
   /* background-color: orange; */
-  width: 1.25vw;
-  height: 1.25vw;
+  width: 1vw;
+  height: 1vw;
   border-radius: 1vw;
   /* border: solid 0.15vw black; */
   margin-right: 2vw;

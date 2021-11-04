@@ -28,13 +28,13 @@ body {
 .detailLeftSticky h1 {
   margin: 0;
   width: 25vw;
-  font-size: 4vw;
+  font-size: 2.2vw;
 }
 
 .detailLeftSticky p {
   margin: 0;
   width: 25vw;
-  font-size: 2vw;
+  font-size: 1.2vw;
 }
 
 .detailRight {
@@ -48,7 +48,7 @@ body {
 }
 
 .detailTitle {
-  font-size: 3vw;
+  font-size: 2.2vw;
   margin: 1vw 0;
 }
 
@@ -68,17 +68,17 @@ body {
 }
 
 .detailSub {
-  font-size: 2vw;
+  font-size: 1.25vw;
   margin: 1vw 0;
 }
 
 .detailText {
-  font-size: 1.25vw;
+  font-size: 0.8vw;
   margin: 1vw 0;
 }
 
 .detailLink {
-  font-size: 1.25vw;
+  font-size: 0.8vw;
   text-decoration: none;
   color: #7385e0;
   font-style: italic;
