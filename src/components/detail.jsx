@@ -36,6 +36,8 @@ class MainDetails extends Detail {
         return <p className="detailText textColour">{ data }</p>
       case "link":
         return <a className="detailLink textColour" href={data.url} target={data.target}>{data.text}</a>
+      case "spacer":
+        return <div className="detailSpacer" style={{height: data+"vh"}}></div>
       default:
         return console.log("Error");
     }
