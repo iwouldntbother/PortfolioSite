@@ -19,7 +19,8 @@
           "type": "image",
           "data": {
             "src": "/imageDB/0000/image0000.jpg",
-            "alt": "Test Image"
+            "alt": "Test Image",
+            "cap": "Test Caption"
           }
         },
         {
@@ -37,6 +38,33 @@
         {
           "type": "spacer",
           "data": "20"
+        },
+        {
+          "type": "bibliography",
+          "data": [
+            {
+              "authors": [
+                ["Will", "Westwood"],
+                ["Will", "Westwood"]
+              ],
+              "year": "2021",
+              "title": "Test Title",
+              "site": "Site Name",
+              "publisher": "Test Publisher",
+              "url": "https://willwestwood.me/"
+            },
+            {
+              "authors": [
+                ["Will", "Westwood"],
+                ["Will", "Westwood"]
+              ],
+              "year": "2021",
+              "title": "Test Title",
+              "site": "Site Name",
+              "publisher": "Test Publisher",
+              "url": "https://willwestwood.me/"
+            }
+          ]
         }
         
       ]

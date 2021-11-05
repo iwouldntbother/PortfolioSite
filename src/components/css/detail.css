@@ -59,12 +59,19 @@ body {
   align-items: center;
   justify-content: center;
   margin: 1vw 0;
+  flex-direction: column;
 }
 
 .detailImage img {
   max-height: 80vh;
   max-width: 68vw;
   width: auto;
+}
+
+.detailImageCap {
+  max-width: 68vw;
+  width: inherit;
+  margin: 0;
 }
 
 .detailSub {
@@ -78,6 +85,25 @@ body {
 }
 
 .detailLink {
+  font-size: 0.8vw;
+  text-decoration: none;
+  color: #7385e0;
+  font-style: italic;
+}
+
+.detailBibliography {
+  font-size: 0.8vw;
+}
+
+.bibliTitle {
+  margin-bottom: 0;
+}
+
+.bibliText {
+  margin: 0;
+}
+
+.bibliURL {
   font-size: 0.8vw;
   text-decoration: none;
   color: #7385e0;
