@@ -28,6 +28,10 @@ code {
   --bg: white;
 }
 
+.redText {
+  color: darkred;
+}
+
 .textColour {
   color: var(--text);
   transition: color 0.5s;

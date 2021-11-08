@@ -110,6 +110,37 @@ body {
   font-style: italic;
 }
 
+.imageGridContainer {
+  width: 68vw;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 1vw 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.imageGridItem {
+  width: 31vw;
+  margin: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageGridIMG {
+  max-width: 31vw;
+  max-height: 40vh;
+}
+
+.imageGridCap {
+  max-width: 68vw;
+  width: inherit;
+  margin: 0;
+  justify-self: left;
+}
+
 @media only screen and (max-width: 600px) {
 
   .detailHolder {

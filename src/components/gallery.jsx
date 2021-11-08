@@ -5,12 +5,13 @@ import './css/gallery.css';
 
 class gItem{
   // super(){}
-  constructor(id, size, cover, title, date) {
+  constructor(id, size, cover, title, date, WIP) {
     this.id = id;
     this.size = size;
     this.cover = cover;
     this.title = title;
     this.date = date;
+    this.WIP = WIP;
   }
 }
 
@@ -28,7 +29,7 @@ function GItemCollection(props) {
   // console.log(db.length)
   for(var i=0; i<db.length; i++) {
     if (props.tag === "all" || db[i].tag === props.tag) {
-      gItemsRenderArray.push(new gItem(db[i].id,db[i].size,db[i].cover,db[i].title,db[i].date))
+      gItemsRenderArray.push(new gItem(db[i].id,db[i].size,db[i].cover,db[i].title,db[i].date,db[i].WIP))
     }
   }
   // console.log(gItemsRenderArray)
@@ -49,6 +50,7 @@ function GItemCollection(props) {
             <div className="gItemDetailsHolder">
               <h1>{item.title}</h1>
               <p>{item.date}</p>
+              <p className="redText">{item.WIP ? "Work in Progress" : ""}</p>
             </div>
             </Link>
       })}

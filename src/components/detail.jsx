@@ -4,6 +4,12 @@ import db from '../db/db.json';
 
 class Detail extends React.Component {
 
+  // workinprogress() {
+  //   if (db[Number(this.props.detailID)].WIP) {
+  //     return 
+  //   }
+  // }
+
   render() {
     return (
       <div>
@@ -12,6 +18,7 @@ class Detail extends React.Component {
           <div className="detailLeftSticky">
             <h1 className={ 'textColour' }>{ db[Number(this.props.detailID)].title }</h1>
             <p className={ 'textColour' }>{ db[Number(this.props.detailID)].date }</p>
+            <p className="redText">{db[Number(this.props.detailID)].WIP ? "Work in Progress" : ""}</p>
           </div>
         </div>
         <div className="detailRight">
@@ -46,6 +53,8 @@ class MainDetails extends Detail {
         return <div className="detailSpacer" style={{height: data+"vh"}}></div>
       case "bibliography":
         return <BibliographyModule bibliData={data} />
+      case "imageGrid":
+        return <ImageGrid data={data} />
       default:
         return console.log("Error");
     }
@@ -73,7 +82,7 @@ class BibliographyModule extends React.Component {
 
   render() {
     return this.bibliData.bibliData.map((item, index) => {
-      return <div>
+      return <div key={index}>
         <BibliographyModuleDetail bibliData={item} />
       </div>
     })
@@ -90,12 +99,23 @@ class BibliographyModuleDetail extends BibliographyModule {
   render() {
     var authorString = "";
     for (var i=0; i< this.bibliData.bibliData.authors.length; i++) {
-      if (i === (this.bibliData.bibliData.authors.length-1)) {
-        authorString += 'and '+this.bibliData.bibliData.authors[i][1]+', '+this.bibliData.bibliData.authors[i][0].slice(0,1)+'.'
-      } else if (i === (this.bibliData.bibliData.authors.length-2)) {
-        authorString += this.bibliData.bibliData.authors[i][1]+', '+this.bibliData.bibliData.authors[i][0].slice(0,1)+'. '
+
+      if (this.bibliData.bibliData.authors[i].length > 1) {        
+        if (i === (this.bibliData.bibliData.authors.length-1) && this.bibliData.bibliData.authors.length > 1) {
+          authorString += 'and '+this.bibliData.bibliData.authors[i][1]+', '+this.bibliData.bibliData.authors[i][0].slice(0,1)+'.'
+        } else if (i === (this.bibliData.bibliData.authors.length-2) || i === (this.bibliData.bibliData.authors.length-1)) {
+          authorString += this.bibliData.bibliData.authors[i][1]+', '+this.bibliData.bibliData.authors[i][0].slice(0,1)+'. '
+        } else {
+          authorString += this.bibliData.bibliData.authors[i][1]+', '+this.bibliData.bibliData.authors[i][0].slice(0,1)+'., '
+        }
       } else {
-        authorString += this.bibliData.bibliData.authors[i][1]+', '+this.bibliData.bibliData.authors[i][0].slice(0,1)+'., '
+        if (i === (this.bibliData.bibliData.authors.length-1) && this.bibliData.bibliData.authors.length > 1) {
+          authorString += 'and '+this.bibliData.bibliData.authors[i][0]+'.'
+        } else if (i === (this.bibliData.bibliData.authors.length-2) || i === (this.bibliData.bibliData.authors.length-1)) {
+          authorString += this.bibliData.bibliData.authors[i][0]+'. '
+        } else {
+          authorString += this.bibliData.bibliData.authors[i][0]+'., '
+        }
       }
     }
     
@@ -105,6 +125,31 @@ class BibliographyModuleDetail extends BibliographyModule {
       <span className="textColour">{this.bibliData.bibliData.site}: </span><a className="bibliURL" href={this.bibliData.bibliData.url}>{this.bibliData.bibliData.url}</a>
       </div>
     
+  }
+}
+
+class ImageGrid extends React.Component {
+  constructor (data) {
+    super(data)
+    this.data = data.data
+    // console.log(data)
+  }
+
+  imageList = () => {
+    return this.data.map((item, index) => {
+      return <div className="imageGridItem" key={index}>
+        <div className="imageGridHolder">
+          <img className="imageGridIMG" src={item.src} alt={item.alt}></img>
+          <p className="imageGridCap textColour">{item.cap}</p>
+        </div>
+      </div>
+    })
+  }
+
+  render() {
+    return <div className="imageGridContainer">
+        <this.imageList />
+      </div>
   }
 }
 
