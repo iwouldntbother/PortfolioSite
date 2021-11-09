@@ -135,10 +135,11 @@ body {
 }
 
 .imageGridCap {
-  max-width: 68vw;
+  max-width: 31vw;
   width: inherit;
   margin: 0;
   justify-self: left;
+  font-size: 0.8vw;
 }
 
 @media only screen and (max-width: 600px) {
@@ -224,8 +225,42 @@ body {
     font-style: italic;
   }
 
+  .detailBibliography {
+    font-size: 3vw;
+  }
+  
+  .bibliTitle {
+    margin-bottom: 0;
+  }
+  
+  .bibliText {
+    margin: 0;
+  }
+  
+  .bibliURL {
+    font-size: 3vw;
+    text-decoration: none;
+    color: #7385e0;
+    font-style: italic;
+  }
 
+  .imageGridContainer {
+    width: 98vw;
+  }
+  
+  .imageGridItem {
+    width: 46vw;
+  }
+  
+  .imageGridIMG {
+    max-width: 46vw;
+  }
+  
+  .imageGridCap {
+    max-width: 46vw;
+    font-size: 3vw;
+  }
 
-
+  
 
 }

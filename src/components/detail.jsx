@@ -122,7 +122,7 @@ class BibliographyModuleDetail extends BibliographyModule {
     return <div className="detailBibliography">
       <h3 className="bibliTitle textColour">"{this.bibliData.bibliData.title}", ({this.bibliData.bibliData.year})</h3>
       <p className="bibliText textColour">{authorString} {this.bibliData.bibliData.publisher}.</p>
-      <span className="textColour">{this.bibliData.bibliData.site}: </span><a className="bibliURL" href={this.bibliData.bibliData.url}>{this.bibliData.bibliData.url}</a>
+      <span className="textColour">{this.bibliData.bibliData.site}: </span><a className="bibliURL" href={this.bibliData.bibliData.url} target="_blank" rel="noreferrer">{this.bibliData.bibliData.url}</a>
       </div>
     
   }

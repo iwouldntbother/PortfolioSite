@@ -118,11 +118,6 @@
               "cap": "Architectural Nonsense"
             },
             {
-              "src": "/imageDB/0000/research/image11.png",
-              "alt": "Map of area around CSM",
-              "cap": "Map of area around CSM"
-            },
-            {
               "src": "/imageDB/0000/research/image12.png",
               "alt": "Heat map",
               "cap": "Heat map"
@@ -131,6 +126,11 @@
               "src": "/imageDB/0000/research/image13.png",
               "alt": "Neural networks, visualised",
               "cap": "Neural networks, visualised"
+            },
+            {
+              "src": "/imageDB/0000/research/image11.png",
+              "alt": "Map of area around CSM",
+              "cap": "Map of area around CSM"
             }
           ]
         },
@@ -140,7 +140,7 @@
         },
         {
           "type": "text",
-          "data": "TODO[Week 1 text]"
+          "data": "..."
         },
         {
           "type": "spacer",
@@ -235,16 +235,6 @@
             },
             {
               "authors": [
-                ["Apple"]
-              ],
-              "year": "2021",
-              "title": "Map of area around CSM",
-              "site": "DuckDuckGo",
-              "publisher": "Apple Maps",
-              "url": "https://duckduckgo.com/?q=central+saint+martins&t=ffab&atb=v295-7__&iax=images&ia=images&iaxm=maps&strict_bbox=0&bbox=51.53843012911433%2C-0.20011741770935032%2C51.48848702843654%2C-0.06965477122497532"
-            },
-            {
-              "authors": [
                 ["DATABLOG"]
               ],
               "year": "2011",
@@ -262,6 +252,16 @@
               "site": "Towards Data Science",
               "publisher": "Towards Data Science",
               "url": "https://towardsdatascience.com/the-mostly-complete-chart-of-neural-networks-explained-3fb6f2367464"
+            },
+            {
+              "authors": [
+                ["Apple"]
+              ],
+              "year": "2021",
+              "title": "Map of area around CSM",
+              "site": "DuckDuckGo",
+              "publisher": "Apple Maps",
+              "url": "https://duckduckgo.com/?q=central+saint+martins&t=ffab&atb=v295-7__&iax=images&ia=images&iaxm=maps&strict_bbox=0&bbox=51.53843012911433%2C-0.20011741770935032%2C51.48848702843654%2C-0.06965477122497532"
             }
           ]
         }
