@@ -95,6 +95,11 @@ body {
   font-size: 0.8vw;
 }
 
+.detailBibliography h3, .detailBibliography p, .detailBibliography span, .detailBibliography a {
+  word-wrap: break-word;
+}
+
+
 .bibliTitle {
   margin-bottom: 0;
 }
@@ -227,6 +232,7 @@ body {
 
   .detailBibliography {
     font-size: 3vw;
+    max-width: 98vw;
   }
   
   .bibliTitle {
@@ -239,9 +245,6 @@ body {
   
   .bibliURL {
     font-size: 3vw;
-    text-decoration: none;
-    color: #7385e0;
-    font-style: italic;
   }
 
   .imageGridContainer {
