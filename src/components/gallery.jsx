@@ -66,6 +66,69 @@ function scrollTop() {
   window.scrollTo(0, 0);
 }
 
+function listView(props) {
+
+  var gItemsRenderArray = [];
+  // console.log(db.length)
+  for(var i=0; i<db.length; i++) {
+    if (props.tag === "all" || db[i].tag === props.tag) {
+      gItemsRenderArray.push(new gItem(db[i].id,db[i].size,db[i].cover,db[i].title,db[i].date,db[i].WIP))
+    }
+  }
+
+  return (
+    <div className='listViewContainer'>
+      <button id='debugBTN' onClick={() => {textSwitch()}}>Switch</button>
+      {gItemsRenderArray.map((item, index) => {
+        return ( 
+          <div className='listViewHolder' key={item.id}>
+            <div className='textHider'>
+              <h1 className='textColour'>{String(index) + '. ' + item.title}</h1>
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+let textVisible = true;
+
+const textSwitch = () => {
+  
+  let textEls = document.getElementsByTagName('h1')
+  
+  if (textVisible) {
+    // console.log('hiding text')
+
+    for (var i=0; i<textEls.length; i++) {
+      textEls[i].style.transform = 'translate(0, 5vh)';
+    }
+
+    textVisible = false;
+  } else {
+    // console.log('showing text')
+
+    for (var j=0; j<textEls.length; j++) {
+      textEls[j].style.transform = 'translate(0, 0)';
+    }
+
+    textVisible = true;
+  }
+}
+
+let view = 'list';
+
+function ViewSwitch(props) {
+  if (view === 'list') {
+    return listView(props);
+  } else if (view === 'grid') {
+    return GItemCollection(props);
+  } else {
+    return <div>error</div>
+  }
+}
+
 // GItemCollection()
 
-export default GItemCollection;
+export default ViewSwitch;

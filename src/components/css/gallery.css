@@ -87,6 +87,32 @@ body {
   text-align: center;
 }
 
+
+.listViewContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.listViewHolder {
+  width: 100vw;
+  padding: 2vw;
+  border: 0.1vw solid white;
+}
+
+.textHider {
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+}
+
+.listViewContainer h1 {
+  margin: 0;
+  transition: 0.5s ease-in-out;
+}
+
 /*  */
 /* MOBILE */
 /*  */
