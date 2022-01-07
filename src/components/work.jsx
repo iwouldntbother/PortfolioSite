@@ -1,4 +1,4 @@
-import GItemCollection from './gallery';
+import GalleryView from './gallery';
 import Detail from './detail';
 import { useParams, Route, Switch } from 'react-router-dom';
 import db from '../db/db.json';
@@ -7,19 +7,20 @@ import db from '../db/db.json';
 function Work() {
   // let match = useRouteMatch();
   // console.log(match)
+
   return (<div>
     <Switch>
       <Route path={'/work/personal/:id?'}>
         <GalleryDetail />
-        <GItemCollection tag={ 'personal' } />
+        <GalleryView tag={ 'personal' } />
       </Route>
       <Route path={'/work/university/:id?'}>
         <GalleryDetail />
-        <GItemCollection tag={ 'university' } />
+        <GalleryView tag={ 'university' } />
       </Route>
       <Route exact path={'/work/:id?'}>
         <GalleryDetail />
-        <GItemCollection tag={ 'all' }/>
+        <GalleryView tag={ 'all' }/>
       </Route>
     </Switch>
 

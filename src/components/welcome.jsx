@@ -9,15 +9,35 @@ class Welcome extends React.Component {
   }
 
   Sketch = (p) => {
+    var poppins;
+    var pts;
 
-     p.setup = () => {
+    p.preload = () => {
+      poppins = p.loadFont('/Poppins-Bold.ttf')
+    }
+
+    p.setup = () => {
       p.createCanvas(p.windowWidth, (p.windowHeight * 0.92))
-     }
 
-     p.draw = () => {
+      pts = poppins.textToPoints('Will Westwood', 0, 0, 120, {
+        sampleFactor: 0.25,
+        simplifyThreshold: 0
+      })
+
+    }
+
+    p.draw = () => {
       p.background(255)
-      grid()
-     }
+      // grid()
+      p.translate(20, 140);
+      p.stroke(0);
+      p.beginShape(p.POINTS)
+      for(let i =0; i< pts.length; i++){
+        p.fill(i % 255);
+        p.vertex(pts[i].x, pts[i].y, pts[i].y); 
+      }
+      p.endShape()
+    }
 
     const particle = (x, y, size, colour) => {
       p.fill(colour)

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -36,6 +38,7 @@ body {
   background-size: cover;
   position: relative;
   text-decoration: none;
+  transition: 0.5s ease-in-out;
   /* border: solid #ddd 0.25vw; */
 }
 
@@ -99,7 +102,7 @@ body {
 .listViewHolder {
   width: 100vw;
   padding: 2vw;
-  border: 0.1vw solid white;
+  /* border: 0.1vw solid white; */
 }
 
 .textHider {
@@ -111,6 +114,41 @@ body {
 .listViewContainer h1 {
   margin: 0;
   transition: 0.5s ease-in-out;
+}
+
+.listItem {
+  font-family: 'Playfair Display', serif;
+  font-size: 4vw;
+}
+
+#galleryCont {
+  position: relative;
+}
+
+#viewSwitchBTN {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 3vw;
+  height: 3vw;
+  padding: 0;
+  border: none;
+  transition: all 0.25s;
+  opacity: 0.3;
+}
+
+#viewSwitchBTN:hover {
+  width: 5vw;
+  height: 5vw;
+  opacity: 1;
+}
+
+.st0{fill:grey}
+.st1{fill:none;stroke:grey;stroke-width:40;stroke-miterlimit:10}
+
+#ListIcon {
+  display: none;
 }
 
 /*  */
