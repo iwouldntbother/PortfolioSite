@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#808080;}
+	.st1{fill:none;stroke:#808080;stroke-width:40;stroke-miterlimit:10;}
+</style>
+<g id="GridIcon">
+	<g>
+		<rect x="62.5" y="62.5" class="st0" width="250" height="250"/>
+	</g>
+	<g>
+		<rect x="375" y="62.5" class="st0" width="250" height="250"/>
+	</g>
+	<g>
+		<rect x="687.5" y="62.5" class="st0" width="250" height="250"/>
+	</g>
+	<g>
+		<rect x="62.5" y="375" class="st0" width="250" height="250"/>
+	</g>
+	<g>
+		<rect x="375" y="375" class="st0" width="250" height="250"/>
+	</g>
+	<g>
+		<rect x="687.5" y="375" class="st0" width="250" height="250"/>
+	</g>
+	<g>
+		<rect x="62.5" y="687.5" class="st0" width="250" height="250"/>
+	</g>
+	<g>
+		<rect x="375" y="687.5" class="st0" width="250" height="250"/>
+	</g>
+	<g>
+		<rect x="687.5" y="687.5" class="st0" width="250" height="250"/>
+	</g>
+</g>
+<g id="ListIcon">
+	<circle class="st0" cx="157.9" cy="187.5" r="95.4"/>
+	<circle class="st0" cx="157.9" cy="500" r="95.4"/>
+	<circle class="st0" cx="157.9" cy="812.5" r="95.4"/>
+	<line class="st1" x1="310.3" y1="187.5" x2="937.5" y2="187.5"/>
+	<line class="st1" x1="310.3" y1="500" x2="937.5" y2="500"/>
+	<line class="st1" x1="310.3" y1="812.5" x2="937.5" y2="812.5"/>
+</g>
+</svg>
