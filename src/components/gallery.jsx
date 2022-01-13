@@ -132,7 +132,8 @@ const GalleryView = (props) => {
       gridVisible = true;
     }
   }
-
+  
+  // eslint-disable-next-line
   const viewToggle = () => {
     if (view === 'list') {
       textSwitch();
@@ -190,7 +191,7 @@ const GalleryView = (props) => {
     }, 50)
     return (
       <div id='galleryCont' className='textColour'>
-        <button id='viewSwitchBTN' onClick={() => {viewToggle()}}>
+        {/* <button id='viewSwitchBTN' onClick={() => {viewToggle()}}>
           <svg id='buttonSVG' version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1000 1000">
             <g id="GridIcon">
               <rect x="62.5" y="62.5" class="st0" width="250" height="250"/>
@@ -212,7 +213,7 @@ const GalleryView = (props) => {
               <line class="st1" x1="310.3" y1="812.5" x2="937.5" y2="812.5"/>
             </g>
           </svg>
-        </button>
+        </button> */}
         {/* <button onClick={() => {gridSwitch()}}>GridAnim</button> */}
         <ViewOption key={view} tag={props.tag}/>
       </div>

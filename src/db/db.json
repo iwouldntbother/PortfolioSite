@@ -362,21 +362,103 @@
     },
     {
       "id": "0002",
-      "tag": "personal",
-      "size": "span-v-2",
-      "cover": "cover.jpg",
-      "title": "title2",
-      "date": "date",
-      "WIP": true
+      "tag": "university",
+      "size": "span-h-2",
+      "cover": "imageDB/0002/clockCover.png",
+      "title": "Clock²",
+      "date": "27.01.2021 - Unit 3",
+      "WIP": false,
+      "detail": [
+        {
+          "type":"title",
+          "data":"Clock²"
+        },
+        {
+          "type":"text",
+          "data":"This project was a challenge to test my problem solving and web development skills. I was tasked to create a clock in any way I liked, only requirement was to use p5.js."
+        },
+        {
+          "type":"image",
+          "data":{
+            "src":"/imageDB/0002/clockCover.png",
+            "alt":"Clock screenshot"
+          }
+        },
+        {
+          "type":"text",
+          "data":"The 168 analog clock faces form the digital time with the position of their hands creating the numbers and the dividing colon."
+        },
+        {
+          "type":"text",
+          "data":"Live version available bellow, as well as the code."
+        },
+        {
+          "type":"link",
+          "data":{
+            "url": "https://clock.wwstwd.studio/",
+            "target":"_blank",
+            "text":"Live version"
+          }
+        },
+        {
+          "type":"link",
+          "data":{
+            "url": "https://github.com/wwstwd/Clock",
+            "target":"_blank",
+            "text":"Code on GitHub"
+          }
+        }
+      ]
     },
     {
       "id": "0003",
-      "tag": "personal",
+      "tag": "university",
       "size": "",
-      "cover": "cover.jpg",
-      "title": "title3",
-      "date": "date",
-      "WIP": true
+      "cover": "/imageDB/0003/ASCIIMazeSS.png",
+      "title": "ASCII Maze",
+      "date": "12.03.2021 - Unit 3",
+      "WIP": false,
+      "detail": [
+        {
+          "type":"title",
+          "data":"ASCII Maze"
+        },
+        {
+          "type":"text",
+          "data":"This project is a 3D maze game built with babylon.js."
+        },
+        {
+          "type":"image",
+          "data":{
+            "src":"/imageDB/0003/ASCIIMazeStartPage.png",
+            "alt":"Maze screenshot"
+          }
+        },
+        {
+          "type":"text",
+          "data":"The maze is generated with the Recursive Backtracking algorithm in 2D, this is then used to form the walls of the maze. The start and end point are always in the same place but the path is generated."
+        },
+        {
+          "type":"text",
+          "data":"Live version available bellow, as well as the code."
+        },
+        {
+          "type":"link",
+          "data":{
+            "url": "https://maze.wwstwd.studio/",
+            "target":"_blank",
+            "text":"Live version"
+          }
+        },
+        {
+          "type":"link",
+          "data":{
+            "url": "https://github.com/wwstwd/ASCIIMaze",
+            "target":"_blank",
+            "text":"Code on GitHub"
+          }
+        }
+      ]
     },
     {
       "id": "0004",

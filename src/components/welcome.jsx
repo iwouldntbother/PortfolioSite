@@ -43,7 +43,7 @@ class Welcome extends React.Component {
       p.fill(colour)
       p.ellipse(x, y, size, size);
     }
-
+    // eslint-disable-next-line
     const grid = () => {
       let spacing = 20
       let x = Math.ceil(p.windowWidth / spacing);

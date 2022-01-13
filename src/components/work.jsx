@@ -1,4 +1,4 @@
-import GalleryView from './gallery';
+import GalleryView from './originalGallery';
 import Detail from './detail';
 import { useParams, Route, Switch } from 'react-router-dom';
 import db from '../db/db.json';
