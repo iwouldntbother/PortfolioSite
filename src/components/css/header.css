@@ -80,7 +80,7 @@
 
   .headerBTNHolder {
     flex-direction: column;
-    height: 80vh;
+    height: 60vh;
     /* margin-bottom: 10vh; */
     margin-top: 20vh;
   }
@@ -111,6 +111,10 @@
   #mobileMenu {
     transition: right 0.5s ease-in-out, background-color 0.5s;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .fillTransition {
