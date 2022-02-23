@@ -2,7 +2,7 @@
     {
       "id": "0000",
       "tag": "university",
-      "size": "span-h-2 span-v-2",
+      "size": "span-h-2",
       "cover": "/imageDB/0000/diagramCover.jpg",
       "title": "D-I-A-G-R-A-M",
       "date": "01/11/21 - Unit 7",
@@ -271,7 +271,7 @@
     {
       "id": "0001",
       "tag": "university",
-      "size": "span-h-2",
+      "size": "",
       "cover": "/imageDB/0001/0004.jpg",
       "title": "The very best of the voices in my head",
       "date": "19.03.21 - Unit 3",
@@ -413,7 +413,7 @@
     {
       "id": "0003",
       "tag": "university",
-      "size": "",
+      "size": "span-h-2",
       "cover": "/imageDB/0003/ASCIIMazeSS.png",
       "title": "ASCII Maze",
       "date": "12.03.2021 - Unit 3",
@@ -463,11 +463,67 @@
     {
       "id": "0004",
       "tag": "personal",
-      "size": "",
-      "cover": "cover.jpg",
-      "title": "title4",
-      "date": "date",
-      "WIP": true
+      "size": "span-h-2",
+      "cover": "/imageDB/0004/GallerySS3.png",
+      "title": "Unlocked Gallery",
+      "date": "23.05.2020",
+      "WIP": false,
+      "detail": [
+        {
+          "type":"title",
+          "data":"Unlocked Gallery"
+        },
+        {
+          "type":"text",
+          "data":"This project is a 3D WebGL based gallery built to host 50 students work for a self-lead FMP (Final Major Project) after my foundation course was ended early due to the coronavirus."
+        },
+        {
+          "type":"image",
+          "data":{
+            "src":"/imageDB/0004/GallerySS1.png",
+            "alt":"Gallery screenshot"
+          }
+        },
+        {
+          "type":"text",
+          "data":"The spaces is based off the Boros Bunker in Berlin, our foundation class had taken a trip their a few weeks before starting this project. The work featured is students and tutors work and ranges from video, photography and 3D scans."
+        },
+        {
+          "type":"image",
+          "data":{
+            "src":"/imageDB/0004/GallerySS2.png",
+            "alt":"Gallery screenshot"
+          }
+        },
+        {
+          "type":"text",
+          "data":"The space was designed in Blender, coded into the browser with Babylon.js and all the work has been converted to 'dxt.ktx' file format to reduce GPU memory usage, allowing it to be viewed on a low powered laptop."
+        },
+        {
+          "type":"text",
+          "data":"I hosted a private view via zoom and we had over 300 visitors in the first month it was public. As well as being able to view our work, visitors were able to buy high quality copies of people's collections and all money raised went to a variety of Black Lives Matter charities."
+        },
+        {
+          "type":"text",
+          "data":"Live version available bellow, as well as the code."
+        },
+        {
+          "type":"link",
+          "data":{
+            "url": "https://gallery.wwstwd.studio/",
+            "target":"_blank",
+            "text":"Live version"
+          }
+        },
+        {
+          "type":"link",
+          "data":{
+            "url": "https://github.com/wwstwd/gallery",
+            "target":"_blank",
+            "text":"Code on GitHub"
+          }
+        }
+      ]
     }
     
 ]
