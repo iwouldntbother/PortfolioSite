@@ -201,7 +201,7 @@ class ImageGrid extends React.Component {
         <div
           className="imageGridItem"
           key={index}
-          style={{ maxWidth: (68 - this.columns * 2) / this.columns + 'vw' }}
+          style={{ maxWidth: 66 / this.columns + 'vw' }}
         >
           <div className="imageGridHolder">
             <img
@@ -209,7 +209,7 @@ class ImageGrid extends React.Component {
               src={item.src}
               alt={item.alt}
               style={{
-                maxWidth: (68 - this.columns * 2) / this.columns + 'vw',
+                maxWidth: (66 - this.columns * 2) / this.columns + 'vw',
               }}
             ></img>
             <p className="imageGridCap textColour">{item.cap}</p>
